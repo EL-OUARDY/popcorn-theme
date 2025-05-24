@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/popcorn.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popcorn</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <header
+      class="header-bg fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
+    >
+      <nav
+        class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-x-2 text-lg font-bold">
+          <svg
+            class="dark:fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+            ></path>
+          </svg>
+          <span
+            class="text-[16.75px] font-semibold tracking-wide sm:text-[18px] dark:text-white"
+          >
+            Popcorn
+          </span>
+        </a>
+
+        <div
+          class="flex flex-row items-center gap-4 text-gray-600 md:gap-8 dark:text-gray-300"
+        >
+          <!-- Links menu -->
+          <ul
+            class="hidden flex-row gap-8 text-[14.75px] font-medium capitalize md:flex"
+          >
+            <li>
+              <a
+                href="#"
+                class="nav-link active dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                >Movies</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                >TV Shows</a
+              >
+            </li>
+          </ul>
+          <!-- Theme switch -->
+          <div class="button relative">
+            <button
+              type="button"
+              id="theme-switcher"
+              class="dark:hover:text-sec dark:text-sec dark:hover:text-sec dark:text-sec dark:hover:text-sec dark:hover:text-sec mb-[2px] flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
+            >
+              <svg
+                class="sun dark:hidden"
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg
+                class="moon hidden dark:block"
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                ></path>
+                <path
+                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Mobile menu trigger -->
+          <button
+            type="button"
+            name="menu"
+            class="inline-block cursor-pointer text-[22.75px] transition-all duration-300 md:hidden"
+            id="show-mobile-header-menu"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!-- Mobile menu -->
+    <div
+      class="mobile-menu bg-main fixed z-100 hidden h-screen w-full dark:bg-black"
+    >
+      <div class="flex h-full flex-col">
+        <div
+          class="header-bg fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
+        >
+          <nav
+            class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
+          >
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-x-2 text-lg font-bold">
+              <svg
+                class="dark:fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                ></path>
+              </svg>
+              <span
+                class="text-[16.75px] font-semibold tracking-wide sm:text-[18px] dark:text-white"
+              >
+                Popcorn
+              </span>
+            </a>
+
+            <div
+              class="flex flex-row items-center gap-4 text-gray-600 md:gap-8 dark:text-gray-300"
+            >
+              <!-- Mobile menu close button -->
+              <button
+                type="button"
+                name="menu"
+                class="dark:hover:text-sec inline-block cursor-pointer text-[22.75px] text-[#444] transition-all duration-300 hover:text-black dark:text-gray-300"
+                id="close-mobile-header-menu"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-x-icon lucide-x"
+                >
+                  <path d="M18 6 6 18" />
+                  <path d="m6 6 12 12" />
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+
+        <ul
+          class="flex flex-1 flex-col items-center justify-center gap-8 text-2xl font-medium capitalize"
+        >
+          <li>
+            <a
+              href="#"
+              class="nav-link active dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+              >Movies</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+              >TV Shows</a
+            >
+          </li>
+        </ul>
+
+        <p
+          class="xs:text-[12px] font-nunito mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6 dark:text-gray-200"
+        >
+          © 2025 by Popcorn. All right reserved.
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
