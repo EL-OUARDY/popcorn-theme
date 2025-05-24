@@ -37,7 +37,7 @@
         >
           <!-- Links menu -->
           <ul
-            class="hidden flex-row gap-8 text-[14.75px] font-medium capitalize md:flex"
+            class="hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex"
           >
             <li>
               <a
@@ -59,6 +59,37 @@
                 class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
                 >TV Shows</a
               >
+            </li>
+            <li>
+              <form action="/search" class="w-full">
+                <div class="relative">
+                  <input
+                    type="text"
+                    name="q"
+                    class="header-bg w-full rounded-full px-4 py-1 pr-8 shadow placeholder:italic dark:text-gray-300"
+                    placeholder="Search"
+                  />
+                  <button
+                    class="abg-header absolute top-0 right-3 flex size-4 h-full items-center fill-current text-[#ff0000] dark:text-[#ff0000]"
+                    type="submit"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      version="1.1"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 56.966 56.966"
+                      style="enable-background: new 0 0 56.966 56.966"
+                      xml:space="preserve"
+                    >
+                      <path
+                        d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </form>
             </li>
           </ul>
           <!-- Theme switch -->
@@ -191,31 +222,64 @@
             </nav>
           </div>
 
-          <ul
-            class="flex flex-1 flex-col items-center justify-center gap-8 text-xl font-medium capitalize"
-          >
-            <li>
-              <a
-                href="#"
-                class="nav-link active dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
-                >Movies</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
-                >TV Shows</a
-              >
-            </li>
-          </ul>
+          <div class="flex flex-1 flex-col">
+            <ul
+              class="flex h-full flex-col items-center justify-center gap-8 text-lg font-medium capitalize"
+            >
+              <li>
+                <form action="/search" class="w-full">
+                  <div class="relative">
+                    <input
+                      type="text"
+                      name="q"
+                      class="header-bg h-10 w-full rounded-full p-4 pr-10 text-lg shadow placeholder:italic dark:text-gray-300"
+                      placeholder="Search"
+                    />
+                    <button
+                      class="absolute top-0 right-3 flex size-5 h-full items-center fill-current text-[#ff0000] dark:text-[#ff0000]"
+                      type="submit"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        x="0px"
+                        y="0px"
+                        viewBox="0 0 56.966 56.966"
+                        style="enable-background: new 0 0 56.966 56.966"
+                        xml:space="preserve"
+                      >
+                        <path
+                          d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link active dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                  >Movies</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                  >TV Shows</a
+                >
+              </li>
+            </ul>
+          </div>
 
           <p
             class="xs:text-[12px] font-nunito mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6 dark:text-gray-200"
@@ -229,8 +293,9 @@
     <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14">
       <!-- Hero section -->
       <div
-        class="hero-swiper xs:h-[520px] h-[460px] w-full sm:h-[640px] lg:h-screen"
+        class="hero-swiper xs:h-[520px] h-[460px] w-full overflow-hidden sm:h-[640px] lg:h-screen"
       >
+        <div class="swiper-pagination"></div>
         <div class="swiper-wrapper">
           <div
             class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"

@@ -156,3 +156,21 @@ a {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ff0000 !important;
+    /* Change to your desired color */
+}
+
+/* Swiper pagination bullets */
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5) !important;
+    /* Inactive bullet color */
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff0000 !important;
+    /* Active bullet color */
+}

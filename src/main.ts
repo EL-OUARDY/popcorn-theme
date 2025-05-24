@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Load default theme from local storage
@@ -23,7 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     slidesPerView: 1,
     autoplay: { delay: 10000, disableOnInteraction: false },
-    modules: [Autoplay],
+    modules: [Autoplay, Pagination, Navigation],
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 });
 
