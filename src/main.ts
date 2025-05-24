@@ -1,3 +1,6 @@
+import Swiper from "swiper";
+import { Autoplay } from "swiper/modules";
+
 document.addEventListener("DOMContentLoaded", () => {
   // Load default theme from local storage
   const _theme = localStorage.getItem("APP_THEME") || "light";
@@ -14,6 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
   menuBtns.forEach((menuBtn) =>
     menuBtn?.addEventListener("click", () => toggleMobileMenu()),
   );
+
+  // Initialize swiper
+  new Swiper(".hero-swiper", {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: { delay: 10000, disableOnInteraction: false },
+    modules: [Autoplay],
+  });
 });
 
 function changeTheme(theme: string | null = null) {

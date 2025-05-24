@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
-    "tailwindcss": "^4.1.7"
+    "tailwindcss": "^4.1.7",
+    "swiper": "^11.2.8"
   }
 }

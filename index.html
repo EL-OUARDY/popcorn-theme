@@ -15,7 +15,7 @@
         class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
       >
         <!-- Logo -->
-        <a href="#" class="flex items-center gap-x-2 text-lg font-bold">
+        <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
           <svg
             class="dark:fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
             xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@
             <button
               type="button"
               id="theme-switcher"
-              class="dark:hover:text-sec dark:text-sec dark:hover:text-sec dark:text-sec dark:hover:text-sec dark:hover:text-sec mb-[2px] flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
+              class="dark:hover:text-sec dark:text-sec dark:hover:text-sec dark:text-sec dark:hover:text-sec dark:hover:text-sec flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
             >
               <svg
                 class="sun dark:hidden"
@@ -132,99 +132,390 @@
           </button>
         </div>
       </nav>
-    </header>
-    <!-- Mobile menu -->
-    <div
-      class="mobile-menu bg-main fixed z-100 hidden h-screen w-full dark:bg-black"
-    >
-      <div class="flex h-full flex-col">
-        <div
-          class="header-bg fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
-        >
-          <nav
-            class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
+      <!-- Mobile menu -->
+      <div
+        class="mobile-menu bg-main fixed inset-0 z-100 hidden h-screen w-full dark:bg-black"
+      >
+        <div class="flex h-full flex-col">
+          <div
+            class="header-bg fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
           >
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-x-2 text-lg font-bold">
-              <svg
-                class="dark:fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
-                ></path>
-              </svg>
-              <span
-                class="text-[16.75px] font-semibold tracking-wide sm:text-[18px] dark:text-white"
-              >
-                Popcorn
-              </span>
-            </a>
-
-            <div
-              class="flex flex-row items-center gap-4 text-gray-600 md:gap-8 dark:text-gray-300"
+            <nav
+              class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
             >
-              <!-- Mobile menu close button -->
-              <button
-                type="button"
-                name="menu"
-                class="dark:hover:text-sec inline-block cursor-pointer text-[22.75px] text-[#444] transition-all duration-300 hover:text-black dark:text-gray-300"
-                id="close-mobile-header-menu"
-              >
+              <!-- Logo -->
+              <a href="#" class="flex items-center gap-x-2 text-lg font-bold">
                 <svg
+                  class="dark:fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
                   viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-x-icon lucide-x"
                 >
-                  <path d="M18 6 6 18" />
-                  <path d="m6 6 12 12" />
+                  <path
+                    d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                  ></path>
                 </svg>
-              </button>
-            </div>
-          </nav>
+                <span
+                  class="text-[16.75px] font-semibold tracking-wide sm:text-[18px] dark:text-white"
+                >
+                  Popcorn
+                </span>
+              </a>
+
+              <div
+                class="flex flex-row items-center gap-4 text-gray-600 md:gap-8 dark:text-gray-300"
+              >
+                <!-- Mobile menu close button -->
+                <button
+                  type="button"
+                  name="menu"
+                  class="dark:hover:text-sec inline-block cursor-pointer text-[22.75px] text-[#444] transition-all duration-300 hover:text-black dark:text-gray-300"
+                  id="close-mobile-header-menu"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-x-icon lucide-x"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                </button>
+              </div>
+            </nav>
+          </div>
+
+          <ul
+            class="flex flex-1 flex-col items-center justify-center gap-8 text-xl font-medium capitalize"
+          >
+            <li>
+              <a
+                href="#"
+                class="nav-link active dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                >Movies</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                >TV Shows</a
+              >
+            </li>
+          </ul>
+
+          <p
+            class="xs:text-[12px] font-nunito mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6 dark:text-gray-200"
+          >
+            © 2025 by Popcorn. All right reserved.
+          </p>
         </div>
-
-        <ul
-          class="flex flex-1 flex-col items-center justify-center gap-8 text-2xl font-medium capitalize"
-        >
-          <li>
-            <a
-              href="#"
-              class="nav-link active dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
-              >Movies</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
-              >TV Shows</a
-            >
-          </li>
-        </ul>
-
-        <p
-          class="xs:text-[12px] font-nunito mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6 dark:text-gray-200"
-        >
-          © 2025 by Popcorn. All right reserved.
-        </p>
       </div>
-    </div>
+    </header>
+
+    <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14">
+      <!-- Hero section -->
+      <div
+        class="hero-swiper xs:h-[520px] h-[460px] w-full sm:h-[640px] lg:h-screen"
+      >
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/1-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
+            >
+              <div
+                class="font-nunito xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+                style="opacity: 1"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  Severance
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  Mark leads a team of office workers whose memories have been
+                  surgically divided between their work and personal lives. When
+                  a mysterious colleague appears outside of work, it begins a
+                  journey to discover the truth about their jobs.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  <a
+                    href="/single.html"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch trailer</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secColor rounded-full bg-[#ff0000] px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch now
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block">
+                <div
+                  class="h-[380px] w-[254px]"
+                  style="opacity: 1; transform: scale(1)"
+                >
+                  <img
+                    src="/images/1.webp"
+                    alt="A Working Man"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/2-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
+            >
+              <div
+                class="font-nunito xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+                style="opacity: 1"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  Snow White
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  Following the benevolent King's disappearance, the Evil Queen
+                  dominated the once fair land with a cruel streak. Princess
+                  Snow White flees the castle when the Queen, in her jealousy
+                  over Snow White's inner beauty, tries to kill her. Deep into
+                  the dark woods, she stumbles upon seven magical dwarves and a
+                  young bandit named Jonathan. Together, they strive to survive
+                  the Queen's relentless pursuit and aspire to take back the
+                  kingdom.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  <a
+                    href="/single.html"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch trailer</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secColor rounded-full bg-[#ff0000] px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch now
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block">
+                <div
+                  class="h-[380px] w-[254px]"
+                  style="opacity: 1; transform: scale(1)"
+                >
+                  <img
+                    src="/images/2.webp"
+                    alt="A Working Man"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/3-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
+            >
+              <div
+                class="font-nunito xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+                style="opacity: 1"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  A Working Man
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  Levon Cade left behind a decorated military career in the
+                  black ops to live a simple life working construction. But when
+                  his boss's daughter, who is like family to him, is taken by
+                  human traffickers, his search to bring her home uncovers a
+                  world of corruption far greater than he ever could have
+                  imagined.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  <a
+                    href="/single.html"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch trailer</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secColor rounded-full bg-[#ff0000] px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch now
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block">
+                <div
+                  class="h-[380px] w-[254px]"
+                  style="opacity: 1; transform: scale(1)"
+                >
+                  <img
+                    src="/images/3.webp"
+                    alt="A Working Man"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/4-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
+            >
+              <div
+                class="font-nunito xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+                style="opacity: 1"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  Vini Jr. (2025)
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  Vini Jr. has it all: talent, resilience and boldness. Follow
+                  his dancing, unpredictable feet on his inspiring journey to
+                  becoming a global soccer star.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
+                  style="transform: translate(0px, 0px); opacity: 1"
+                >
+                  <a
+                    href="/single.html"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch trailer</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secColor rounded-full bg-[#ff0000] px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch now
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block">
+                <div
+                  class="h-[380px] w-[254px]"
+                  style="opacity: 1; transform: scale(1)"
+                >
+                  <img
+                    src="/images/4.webp"
+                    alt="A Working Man"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Latest releases -->
+      <!-- Most watched -->
+      <!-- Top rated -->
+    </main>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
