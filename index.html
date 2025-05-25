@@ -74,17 +74,17 @@
                     type="submit"
                   >
                     <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
                       xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      version="1.1"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 56.966 56.966"
-                      style="enable-background: new 0 0 56.966 56.966"
-                      xml:space="preserve"
                     >
                       <path
-                        d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+                        fill-rule="evenodd"
+                        d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
                       ></path>
                     </svg>
                   </button>
@@ -166,10 +166,17 @@
       <!-- Mobile menu -->
       <div
         class="mobile-menu bg-background fixed inset-0 z-100 hidden h-screen w-full dark:bg-black"
+        style="
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
+            url(&quot;/images/movies-bg.webp&quot;);
+          background-position: center center;
+          background-size: cover;
+        "
       >
         <div class="flex h-full flex-col">
           <div
-            class="header-bg fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
+            class="header-bg-transparent fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
           >
             <nav
               class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
@@ -177,7 +184,7 @@
               <!-- Logo -->
               <a href="#" class="flex items-center gap-x-2 text-lg font-bold">
                 <svg
-                  class="dark:fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
+                  class="fill-primary h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -186,7 +193,7 @@
                   ></path>
                 </svg>
                 <span
-                  class="text-[16.75px] font-semibold tracking-wide sm:text-[18px] dark:text-white"
+                  class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
                 >
                   PopStream
                 </span>
@@ -199,7 +206,7 @@
                 <button
                   type="button"
                   name="menu"
-                  class="dark:hover:text-secondary inline-block cursor-pointer text-[22.75px] text-gray-700 transition-all duration-300 hover:text-black dark:text-gray-300"
+                  class="hover:text-secondary inline-block cursor-pointer text-[22.75px] text-gray-300 transition-all duration-300"
                   id="close-mobile-header-menu"
                 >
                   <svg
@@ -227,54 +234,49 @@
               class="flex h-full flex-col items-center justify-center gap-8 text-lg font-medium capitalize"
             >
               <li>
-                <form action="/search" class="w-full">
-                  <div class="relative">
-                    <input
-                      type="text"
-                      name="q"
-                      class="header-bg h-10 w-full rounded-full p-4 pr-10 text-base shadow placeholder:italic dark:text-gray-300"
-                      placeholder="Search"
-                    />
-                    <button
-                      class="text-primary dark:text-primary absolute top-0 right-3 flex size-5 h-full items-center fill-current"
-                      type="submit"
+                <form
+                  class="flex flex-row items-center justify-center pt-6 text-[14px] sm:pt-8 sm:pb-10 md:pt-9 md:pb-10 lg:py-10"
+                >
+                  <input
+                    type="text"
+                    class="w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium text-gray-300 shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px]"
+                    placeholder="Search "
+                    name="search"
+                  /><button
+                    type="submit"
+                    class="text-primary z-[1] -ml-[32px] text-[18px]"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        version="1.1"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 56.966 56.966"
-                        style="enable-background: new 0 0 56.966 56.966"
-                        xml:space="preserve"
-                      >
-                        <path
-                          d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
+                      <path
+                        fill-rule="evenodd"
+                        d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
+                      ></path>
+                    </svg>
+                  </button>
                 </form>
               </li>
               <li>
                 <a
                   href="#"
-                  class="nav-link active dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
+                  class="nav-link active hover:text-secondary text-gray-300"
                   >Home</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
+                <a href="#" class="nav-link hover:text-secondary text-gray-300"
                   >Movies</a
                 >
               </li>
               <li>
-                <a
-                  href="#"
-                  class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
+                <a href="#" class="nav-link hover:text-secondary text-gray-300"
                   >TV Shows</a
                 >
               </li>
@@ -567,7 +569,7 @@
             </div>
             <a
               class="xs:text-[12.75px] view-all-btn rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
-              href="/browse-all.html"
+              href="/browse.html"
               >View all</a
             >
           </div>
@@ -912,7 +914,7 @@
             </div>
             <a
               class="xs:text-[12.75px] view-all-btn rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
-              href="/browse-all.html"
+              href="/browse.html"
               >View all</a
             >
           </div>
@@ -1257,7 +1259,7 @@
             </div>
             <a
               class="xs:text-[12.75px] view-all-btn rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
-              href="/browse-all.html"
+              href="/browse.html"
               >View all</a
             >
           </div>
@@ -1673,7 +1675,7 @@
           <li class="text-center">
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
-              href="/browse-all.html"
+              href="/browse.html"
               >Most Watched</a
             >
           </li>
@@ -1689,7 +1691,7 @@
           <li class="text-center">
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
-              href="/browse-all.html"
+              href="/browse.html"
               >Recent releases</a
             >
           </li>
