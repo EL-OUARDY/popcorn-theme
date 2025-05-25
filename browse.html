@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/PopStream.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopStream</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body class="bg-background selection:bg-primary/20 font-sans">
+    <header
+      class="header-bg-transparent fixed top-0 left-0 z-101 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
+    >
+      <nav
+        class="desktop mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
+      >
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
+          <svg
+            class="fill-primary h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+            ></path>
+          </svg>
+          <span
+            class="text-[16.75px] font-semibold tracking-wide sm:text-[18px] dark:text-white"
+          >
+            PopStream
+          </span>
+        </a>
+
+        <div
+          class="flex flex-row items-center gap-4 text-gray-600 md:gap-8 dark:text-gray-300"
+        >
+          <!-- Links menu -->
+          <ul
+            class="desktop hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex"
+          >
+            <li>
+              <a
+                href="/"
+                class="nav-link active dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/browse.html"
+                class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
+                >Movies</a
+              >
+            </li>
+            <li>
+              <a
+                href="/browse.html"
+                class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
+                >TV Shows</a
+              >
+            </li>
+            <li>
+              <form action="/search" class="w-full">
+                <div class="relative">
+                  <input
+                    type="text"
+                    name="q"
+                    class="header-bg w-full rounded-full px-4 py-1 pr-8 shadow placeholder:italic dark:text-gray-300"
+                    placeholder="Search"
+                  />
+                  <button
+                    class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current"
+                    type="submit"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <!-- Theme switch -->
+          <div class="button relative">
+            <button
+              type="button"
+              id="theme-switcher"
+              class="dark:text-secondary dark:hover:text-secondary flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
+            >
+              <svg
+                class="sun dark:hidden"
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg
+                class="moon hidden dark:block"
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                ></path>
+                <path
+                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Mobile menu trigger -->
+          <button
+            type="button"
+            name="menu"
+            class="inline-block cursor-pointer text-[22.75px] transition-all duration-300 md:hidden"
+            id="show-mobile-header-menu"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile menu -->
+      <div
+        class="mobile-menu bg-background fixed inset-0 z-100 hidden h-screen w-full dark:bg-black"
+        style="
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
+            url(&quot;/images/background.webp&quot;);
+          background-position: center center;
+          background-size: cover;
+        "
+      >
+        <div class="flex h-full flex-col">
+          <div
+            class="header-bg-transparent fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
+          >
+            <nav
+              class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
+            >
+              <!-- Logo -->
+              <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
+                <svg
+                  class="fill-primary h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                  ></path>
+                </svg>
+                <span
+                  class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
+                >
+                  PopStream
+                </span>
+              </a>
+
+              <div
+                class="flex flex-row items-center gap-4 text-gray-600 md:gap-8 dark:text-gray-300"
+              >
+                <!-- Mobile menu close button -->
+                <button
+                  type="button"
+                  name="menu"
+                  class="hover:text-secondary inline-block cursor-pointer text-[22.75px] text-gray-300 transition-all duration-300"
+                  id="close-mobile-header-menu"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-x-icon lucide-x"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                </button>
+              </div>
+            </nav>
+          </div>
+
+          <div class="flex flex-1 flex-col">
+            <ul
+              class="flex h-full flex-col items-center justify-center gap-8 text-lg font-medium capitalize"
+            >
+              <li>
+                <form
+                  class="flex flex-row items-center justify-center pt-6 text-[14px] sm:pt-8 sm:pb-10 md:pt-9 md:pb-10 lg:py-10"
+                >
+                  <input
+                    type="text"
+                    class="w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium text-gray-300 shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px]"
+                    placeholder="Search "
+                    name="search"
+                  /><button
+                    type="submit"
+                    class="text-primary z-[1] -ml-[32px] text-[18px]"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
+                      ></path>
+                    </svg>
+                  </button>
+                </form>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  class="nav-link active hover:text-secondary text-gray-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/browse.html"
+                  class="nav-link hover:text-secondary text-gray-300"
+                  >Movies</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/browse.html"
+                  class="nav-link hover:text-secondary text-gray-300"
+                  >TV Shows</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <p
+            class="xs:text-[12px] mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6 dark:text-gray-200"
+          >
+            © 2025 by PopStream. All right reserved.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14">
+      <!-- Title -->
+      <div
+        class="relative min-h-[96px] sm:min-h-[114px] md:min-h-[132px] lg:min-h-[140px]"
+        style="
+          background-image:
+            linear-gradient(
+              to right,
+              rgba(0, 0, 0, 0.075),
+              rgba(0, 0, 0, 0.075)
+            ),
+            url(&quot;/images/background.webp&quot;);
+          background-size: cover;
+          background-position: center center;
+        "
+      >
+        <h2
+          class="xs:top-[60%] absolute top-[57.75%] left-1/2 w-full -translate-x-1/2 text-center text-base font-semibold text-white capitalize sm:top-[65%] sm:text-xl md:top-[70%] md:text-2xl"
+        >
+          Browse Movies
+        </h2>
+      </div>
+
+      <section class="mx-auto max-w-[940px] px-4 sm:px-6 md:px-8 xl:px-0">
+        <!-- Search -->
+        <form
+          class="flex flex-row items-center justify-center pt-6 pb-8 text-[14px] sm:pt-8 sm:pb-10 md:pt-9 md:pb-10 lg:py-10"
+        >
+          <input
+            type="text"
+            class="w-[300px] rounded-full py-[8px] pr-[36px] pl-[20px] font-medium text-[#666] shadow-md transition-all duration-300 outline-none focus:bg-white focus:shadow-sm md:w-[340px] dark:bg-[#302d3a] dark:text-white dark:focus:bg-[#474550]"
+            placeholder="Search here"
+            name="search"
+          /><button
+            type="submit"
+            class="text-primary z-[1] -ml-[32px] text-[18px]"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
+              ></path>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Movies grid -->
+        <div
+          class="xs:grid-cols-2 grid grid-cols-1 justify-items-center gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+        >
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/1.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Severance
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/13.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Mission Impossible - The Final Reckoning
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/3.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              A Working Man
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/17.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              The Green Mile
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/5.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Game of Thrones
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/6.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Parasite
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/7.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              The Shawshank Redemption
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/2.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Snow White
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/8.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Arcane
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/9.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Interstellar
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/10.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Dark Knight
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/11.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Late Night
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/12.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Warfare
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/14.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Schindler's List
+            </h4>
+          </div>
+
+          <div
+            class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
+          >
+            <a
+              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              href="/single.html"
+              ><img
+                src="/images/15.webp"
+                alt=""
+                height="250"
+                width="170"
+                class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+              <div
+                class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+              >
+                <div
+                  class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                    ></path>
+                  </svg>
+                </div></div
+            ></a>
+            <h4
+              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+            >
+              Avatar: The Last Airbender
+            </h4>
+          </div>
+        </div>
+        <div class="flex w-full items-center justify-center">
+          <button
+            type="button"
+            class="xs:py-[6px] xs:px-3 xs:text-[14px] bg-primary my-4 rounded-full px-[10.75px] py-1 text-[12.75px] font-medium text-gray-50 shadow-md transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-2 sm:text-[14.75px] md:text-[15.25px]"
+          >
+            Load more
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="xs:py-8 w-full py-[30px] sm:py-10 lg:py-16 dark:bg-black"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
+          url(&quot;/images/background.webp&quot;);
+        background-position: center center;
+        background-size: cover;
+      "
+    >
+      <div
+        class="xs:gap-[30px] mx-auto flex max-w-[1140px] flex-col items-center gap-6 px-4 sm:gap-8 sm:px-6 md:gap-12 md:px-8 lg:gap-14 xl:px-0"
+      >
+        <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
+          <svg
+            class="fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+            ></path>
+          </svg>
+          <span
+            class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
+          >
+            PopStream
+          </span>
+        </a>
+        <ul
+          class="xs:gap-[6px] grid grid-cols-2 items-center justify-start gap-1 font-medium text-gray-300 capitalize sm:gap-2 md:gap-4 md:gap-x-16 md:gap-y-4"
+        >
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/"
+              >Home</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >Most Watched</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/about.html"
+              >about us</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >Recent releases</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/contact.html"
+              >Contact</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >Top rated</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/privacy"
+              >Privacy policy</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/privacy"
+              >Terms and conditions
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
