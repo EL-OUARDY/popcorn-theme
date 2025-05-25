@@ -7,7 +7,7 @@
     <title>PopStream</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
-  <body class="bg-background selection:bg-primary/20 font-sans">
+  <body class="bg-background selection:bg-primary/20 text-foreground font-sans">
     <header
       class="header-bg-transparent fixed top-0 left-0 z-101 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
     >
@@ -32,33 +32,19 @@
           </span>
         </a>
 
-        <div
-          class="flex flex-row items-center gap-4 text-gray-600 md:gap-8 dark:text-gray-300"
-        >
+        <div class="flex flex-row items-center gap-4 md:gap-8">
           <!-- Links menu -->
           <ul
             class="desktop hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex"
           >
             <li>
-              <a
-                href="/"
-                class="nav-link active dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
-                >Home</a
-              >
+              <a href="/" class="nav-link active">Home</a>
             </li>
             <li>
-              <a
-                href="/browse.html"
-                class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
-                >Movies</a
-              >
+              <a href="/browse.html" class="nav-link">Movies</a>
             </li>
             <li>
-              <a
-                href="/browse.html"
-                class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
-                >TV Shows</a
-              >
+              <a href="/browse.html" class="nav-link">TV Shows</a>
             </li>
             <li>
               <form action="/search" class="w-full">
@@ -66,7 +52,7 @@
                   <input
                     type="text"
                     name="q"
-                    class="header-bg w-full rounded-full px-4 py-1 pr-8 shadow placeholder:italic dark:text-gray-300"
+                    class="header-bg dark:text-foreground w-full rounded-full px-4 py-1 pr-8 shadow placeholder:italic"
                     placeholder="Search"
                   />
                   <button
@@ -97,7 +83,7 @@
             <button
               type="button"
               id="theme-switcher"
-              class="dark:text-secondary dark:hover:text-secondary flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
+              class="flex cursor-pointer items-center justify-center transition-all duration-100 hover:scale-110"
             >
               <svg
                 class="sun dark:hidden"
@@ -165,7 +151,7 @@
       </nav>
       <!-- Mobile menu -->
       <div
-        class="mobile-menu bg-background fixed inset-0 z-100 hidden h-screen w-full dark:bg-black"
+        class="mobile-menu bg-background dark:bg-foreground fixed inset-0 z-100 hidden h-screen w-full"
         style="
           background-image:
             linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
@@ -200,13 +186,13 @@
               </a>
 
               <div
-                class="flex flex-row items-center gap-4 text-gray-600 md:gap-8 dark:text-gray-300"
+                class="dark:text-foreground text-foreground-muted flex flex-row items-center gap-4 md:gap-8"
               >
                 <!-- Mobile menu close button -->
                 <button
                   type="button"
                   name="menu"
-                  class="hover:text-secondary inline-block cursor-pointer text-[22.75px] text-gray-300 transition-all duration-300"
+                  class="text-foreground-inverse dark:text-foreground inline-block cursor-pointer text-[22.75px] transition-all duration-300"
                   id="close-mobile-header-menu"
                 >
                   <svg
@@ -239,7 +225,7 @@
                 >
                   <input
                     type="text"
-                    class="w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium text-gray-300 shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px]"
+                    class="dark:text-foreground text-foreground-inverse w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px]"
                     placeholder="Search "
                     name="search"
                   /><button
@@ -266,21 +252,21 @@
               <li>
                 <a
                   href="/"
-                  class="nav-link active hover:text-secondary text-gray-300"
+                  class="nav-link active text-foreground-inverse dark:text-foreground"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="/browse.html"
-                  class="nav-link hover:text-secondary text-gray-300"
+                  class="nav-link text-foreground-inverse dark:text-foreground"
                   >Movies</a
                 >
               </li>
               <li>
                 <a
                   href="/browse.html"
-                  class="nav-link hover:text-secondary text-gray-300"
+                  class="nav-link text-foreground-inverse dark:text-foreground"
                   >TV Shows</a
                 >
               </li>
@@ -288,7 +274,7 @@
           </div>
 
           <p
-            class="xs:text-[12px] mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6 dark:text-gray-200"
+            class="xs:text-[12px] dark:text-foreground mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6"
           >
             © 2025 by PopStream. All right reserved.
           </p>
@@ -358,7 +344,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/1.webp"
@@ -388,7 +374,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Severance
             </h4>
@@ -398,7 +384,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/13.webp"
@@ -428,7 +414,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Mission Impossible - The Final Reckoning
             </h4>
@@ -438,7 +424,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/3.webp"
@@ -468,7 +454,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               A Working Man
             </h4>
@@ -478,7 +464,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/17.webp"
@@ -508,7 +494,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               The Green Mile
             </h4>
@@ -518,7 +504,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/5.webp"
@@ -548,7 +534,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Game of Thrones
             </h4>
@@ -558,7 +544,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/6.webp"
@@ -588,7 +574,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Parasite
             </h4>
@@ -598,7 +584,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/7.webp"
@@ -628,7 +614,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               The Shawshank Redemption
             </h4>
@@ -638,7 +624,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/2.webp"
@@ -668,7 +654,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Snow White
             </h4>
@@ -678,7 +664,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/8.webp"
@@ -708,7 +694,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Arcane
             </h4>
@@ -718,7 +704,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/9.webp"
@@ -748,7 +734,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Interstellar
             </h4>
@@ -758,7 +744,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/10.webp"
@@ -788,7 +774,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Dark Knight
             </h4>
@@ -798,7 +784,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/11.webp"
@@ -828,7 +814,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Late Night
             </h4>
@@ -838,7 +824,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/12.webp"
@@ -868,7 +854,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Warfare
             </h4>
@@ -878,7 +864,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/14.webp"
@@ -908,7 +894,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Schindler's List
             </h4>
@@ -918,7 +904,7 @@
             class="xs:gap-4 xs:max-w-[170px] mb-[10px] flex w-full max-w-full flex-col items-center gap-2 rounded-lg sm:mb-4 md:mb-5 lg:mb-6"
           >
             <a
-              class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+              class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
               href="/single.html"
               ><img
                 src="/images/15.webp"
@@ -948,7 +934,7 @@
                 </div></div
             ></a>
             <h4
-              class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+              class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Avatar: The Last Airbender
             </h4>
@@ -966,7 +952,7 @@
     </main>
 
     <footer
-      class="xs:py-8 w-full py-[30px] sm:py-10 lg:py-16 dark:bg-black"
+      class="xs:py-8 dark:bg-foreground w-full py-[30px] sm:py-10 lg:py-16"
       style="
         background-image:
           linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
@@ -980,7 +966,7 @@
       >
         <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
           <svg
-            class="fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
+            class="fill-primary fill-foreground h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -995,7 +981,7 @@
           </span>
         </a>
         <ul
-          class="xs:gap-[6px] grid grid-cols-2 items-center justify-start gap-1 font-medium text-gray-300 capitalize sm:gap-2 md:gap-4 md:gap-x-16 md:gap-y-4"
+          class="xs:gap-[6px] dark:text-foreground text-foreground-inverse grid grid-cols-2 items-center justify-start gap-1 font-medium capitalize sm:gap-2 md:gap-4 md:gap-x-16 md:gap-y-4"
         >
           <li class="text-center">
             <a

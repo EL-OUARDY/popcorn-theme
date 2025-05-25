@@ -7,11 +7,17 @@
 @layer base {
     :root {
         --background: #fefefe;
+        --foreground: #000;
+        --foreground-muted: #efefef;
+        --foreground-inverse: #d1d5db;
     }
 
 
     .dark {
         --background: #191624;
+        --foreground: #d1d5db;
+        --foreground-muted: #374151;
+        --foreground-inverse: #000;
     }
 }
 
@@ -20,10 +26,11 @@
     --breakpoint-xs: 380px;
 
     /* Color palette */
-    --color-black: #191624;
     --color-primary: #dc2626;
-    --color-secondary: #efefef;
     --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-foreground-muted: var(--foreground-muted);
+    --color-foreground-inverse: var(--foreground-inverse);
 
     /* Shadows */
     --shadow-glow: 0 0 18px color-mix(in srgb, var(--color-primary) 70%, transparent);
@@ -166,16 +173,15 @@ a {
     @apply text-white bg-transparent
 }
 
-.header-bg-transparent ul.desktop li a {
-    @apply hover:text-secondary text-gray-300
-}
 
-.header-bg-transparent #theme-switcher, .header-bg-transparent #show-mobile-header-menu {
-    @apply hover:text-secondary text-gray-300
+.header-bg-transparent ul.desktop li a,
+.header-bg-transparent #theme-switcher,
+.header-bg-transparent #show-mobile-header-menu,
+.header-bg-transparent ul.desktop li form input {
+    @apply text-foreground-inverse dark:text-foreground
 }
 
 .header-bg-transparent ul.desktop li form input {
-    @apply text-gray-300;
     background: linear-gradient(to bottom,
             rgba(0, 0, 0, 0.4),
             rgba(0, 0, 0, 0.3));
