@@ -7,7 +7,7 @@
     <title>Popcorn</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
-  <body class="selection:bg-primary/20">
+  <body class="bg-background selection:bg-primary/20 font-sans">
     <header
       class="header-bg fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
     >
@@ -42,21 +42,21 @@
             <li>
               <a
                 href="#"
-                class="nav-link active dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                class="nav-link active dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
                 >Movies</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
                 >TV Shows</a
               >
             </li>
@@ -97,7 +97,7 @@
             <button
               type="button"
               id="theme-switcher"
-              class="dark:hover:text-sec dark:text-sec dark:hover:text-sec dark:text-sec dark:hover:text-sec dark:hover:text-sec flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
+              class="dark:hover:text-secondary dark:text-secondary dark:hover:text-secondary dark:text-secondary dark:hover:text-secondary dark:hover:text-secondary flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
             >
               <svg
                 class="sun dark:hidden"
@@ -165,7 +165,7 @@
       </nav>
       <!-- Mobile menu -->
       <div
-        class="mobile-menu bg-main fixed inset-0 z-100 hidden h-screen w-full dark:bg-black"
+        class="mobile-menu bg-background fixed inset-0 z-100 hidden h-screen w-full dark:bg-black"
       >
         <div class="flex h-full flex-col">
           <div
@@ -199,7 +199,7 @@
                 <button
                   type="button"
                   name="menu"
-                  class="dark:hover:text-sec inline-block cursor-pointer text-[22.75px] text-[#444] transition-all duration-300 hover:text-black dark:text-gray-300"
+                  class="dark:hover:text-secondary inline-block cursor-pointer text-[22.75px] text-gray-700 transition-all duration-300 hover:text-black dark:text-gray-300"
                   id="close-mobile-header-menu"
                 >
                   <svg
@@ -260,21 +260,21 @@
               <li>
                 <a
                   href="#"
-                  class="nav-link active dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                  class="nav-link active dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                  class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
                   >Movies</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="nav-link dark:hover:text-sec text-[#444] hover:text-black dark:text-gray-300"
+                  class="nav-link dark:hover:text-secondary text-gray-700 hover:text-black dark:text-gray-300"
                   >TV Shows</a
                 >
               </li>
@@ -282,7 +282,7 @@
           </div>
 
           <p
-            class="xs:text-[12px] font-nunito mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6 dark:text-gray-200"
+            class="xs:text-[12px] mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6 dark:text-gray-200"
           >
             © 2025 by Popcorn. All right reserved.
           </p>
@@ -302,7 +302,7 @@
             style="
               background-image:
                 linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-                url(&quot;/images/1-wide.webp&quot;);
+                url(&quot;/images/3-wide.webp&quot;);
               background-position: center center;
               background-size: cover;
               width: 1041px;
@@ -312,27 +312,25 @@
               class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
             >
               <div
-                class="font-nunito xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
-                style="opacity: 1"
+                class="xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
               >
                 <h2
-                  class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
-                  style="transform: translate(0px, 0px); opacity: 1"
+                  class="xs:text-3xl xs:leading-normal text-secondaryColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
                 >
-                  Severance
+                  A Working Man
                 </h2>
                 <p
                   class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
-                  style="transform: translate(0px, 0px); opacity: 1"
                 >
-                  Mark leads a team of office workers whose memories have been
-                  surgically divided between their work and personal lives. When
-                  a mysterious colleague appears outside of work, it begins a
-                  journey to discover the truth about their jobs.
+                  Levon Cade left behind a decorated military career in the
+                  black ops to live a simple life working construction. But when
+                  his boss's daughter, who is like family to him, is taken by
+                  human traffickers, his search to bring her home uncovers a
+                  world of corruption far greater than he ever could have
+                  imagined.
                 </p>
                 <div
                   class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
-                  style="transform: translate(0px, 0px); opacity: 1"
                 >
                   <a
                     href="/single.html"
@@ -343,17 +341,76 @@
                   ><a
                     href="/single.html"
                     name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secColor bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secondaryColor bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
                     Watch now
                   </a>
                 </div>
               </div>
               <div class="mr-auto hidden md:block">
-                <div
-                  class="h-[380px] w-[254px]"
-                  style="opacity: 1; transform: scale(1)"
+                <div class="h-[380px] w-[254px]">
+                  <img
+                    src="/images/3.webp"
+                    alt="A Working Man"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/1-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
+            >
+              <div
+                class="xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal text-secondaryColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
                 >
+                  Severance
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
+                >
+                  Mark leads a team of office workers whose memories have been
+                  surgically divided between their work and personal lives. When
+                  a mysterious colleague appears outside of work, it begins a
+                  journey to discover the truth about their jobs.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
+                >
+                  <a
+                    href="/single.html"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch trailer</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secondaryColor bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch now
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block">
+                <div class="h-[380px] w-[254px]">
                   <img
                     src="/images/1.webp"
                     alt="A Working Man"
@@ -365,6 +422,7 @@
               </div>
             </div>
           </div>
+
           <div
             class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"
             style="
@@ -380,18 +438,15 @@
               class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
             >
               <div
-                class="font-nunito xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
-                style="opacity: 1"
+                class="xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
               >
                 <h2
-                  class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
-                  style="transform: translate(0px, 0px); opacity: 1"
+                  class="xs:text-3xl xs:leading-normal text-secondaryColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
                 >
                   Snow White
                 </h2>
                 <p
                   class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
-                  style="transform: translate(0px, 0px); opacity: 1"
                 >
                   Following the benevolent King's disappearance, the Evil Queen
                   dominated the once fair land with a cruel streak. Princess
@@ -404,7 +459,6 @@
                 </p>
                 <div
                   class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
-                  style="transform: translate(0px, 0px); opacity: 1"
                 >
                   <a
                     href="/single.html"
@@ -415,17 +469,14 @@
                   ><a
                     href="/single.html"
                     name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secColor bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secondaryColor bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
                     Watch now
                   </a>
                 </div>
               </div>
               <div class="mr-auto hidden md:block">
-                <div
-                  class="h-[380px] w-[254px]"
-                  style="opacity: 1; transform: scale(1)"
-                >
+                <div class="h-[380px] w-[254px]">
                   <img
                     src="/images/2.webp"
                     alt="A Working Man"
@@ -437,76 +488,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"
-            style="
-              background-image:
-                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-                url(&quot;/images/3-wide.webp&quot;);
-              background-position: center center;
-              background-size: cover;
-              width: 1041px;
-            "
-          >
-            <div
-              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
-            >
-              <div
-                class="font-nunito xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
-                style="opacity: 1"
-              >
-                <h2
-                  class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
-                  style="transform: translate(0px, 0px); opacity: 1"
-                >
-                  A Working Man
-                </h2>
-                <p
-                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
-                  style="transform: translate(0px, 0px); opacity: 1"
-                >
-                  Levon Cade left behind a decorated military career in the
-                  black ops to live a simple life working construction. But when
-                  his boss's daughter, who is like family to him, is taken by
-                  human traffickers, his search to bring her home uncovers a
-                  world of corruption far greater than he ever could have
-                  imagined.
-                </p>
-                <div
-                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
-                  style="transform: translate(0px, 0px); opacity: 1"
-                >
-                  <a
-                    href="/single.html"
-                    name="watch-trailer"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
-                  >
-                    Watch trailer</a
-                  ><a
-                    href="/single.html"
-                    name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secColor bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
-                  >
-                    Watch now
-                  </a>
-                </div>
-              </div>
-              <div class="mr-auto hidden md:block">
-                <div
-                  class="h-[380px] w-[254px]"
-                  style="opacity: 1; transform: scale(1)"
-                >
-                  <img
-                    src="/images/3.webp"
-                    alt="A Working Man"
-                    height="380"
-                    width="254"
-                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div
             class="swiper-slide h-full w-full will-change-transform motion-reduce:transform-none"
             style="
@@ -522,18 +504,15 @@
               class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
             >
               <div
-                class="font-nunito xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
-                style="opacity: 1"
+                class="xs:gap-3 flex max-w-[90vw] flex-col gap-[10px] text-gray-300 sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
               >
                 <h2
-                  class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
-                  style="transform: translate(0px, 0px); opacity: 1"
+                  class="xs:text-3xl xs:leading-normal text-secondaryColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2]"
                 >
                   Vini Jr. (2025)
                 </h2>
                 <p
                   class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base"
-                  style="transform: translate(0px, 0px); opacity: 1"
                 >
                   Vini Jr. has it all: talent, resilience and boldness. Follow
                   his dancing, unpredictable feet on his inspiring journey to
@@ -541,7 +520,6 @@
                 </p>
                 <div
                   class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
-                  style="transform: translate(0px, 0px); opacity: 1"
                 >
                   <a
                     href="/single.html"
@@ -552,17 +530,14 @@
                   ><a
                     href="/single.html"
                     name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secColor bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow text-secondaryColor bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
                     Watch now
                   </a>
                 </div>
               </div>
               <div class="mr-auto hidden md:block">
-                <div
-                  class="h-[380px] w-[254px]"
-                  style="opacity: 1; transform: scale(1)"
-                >
+                <div class="h-[380px] w-[254px]">
                   <img
                     src="/images/4.webp"
                     alt="A Working Man"
@@ -580,7 +555,7 @@
         class="xs:mt-4 mx-auto mt-2 max-w-[1140px] px-4 sm:mt-6 sm:px-6 md:mt-8 md:px-8 lg:mt-12 xl:px-0"
       >
         <!-- Latest releases -->
-        <section class="xs:py-[18.75px] font-nunito py-[16.75px] sm:py-[20px]">
+        <section class="xs:py-[18.75px] py-[16.75px] sm:py-[20px]">
           <div class="mb-[22.75px] flex flex-row items-center justify-between">
             <div class="relative">
               <h3
@@ -591,7 +566,7 @@
               <div class="line"></div>
             </div>
             <a
-              class="xs:text-[12.75px] view-all-btn--light rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
+              class="xs:text-[12.75px] view-all-btn rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
               href="/browse-all.html"
               >View all</a
             >
@@ -713,49 +688,9 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Late Night with Seth Meyers
-                  </h4>
-                </div>
-
-                <div
-                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
-                >
-                  <a
-                    class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
-                    href="/single.html"
-                    ><img
-                      src="/images/4.webp"
-                      alt="Vini Jr. (2025)"
-                      height="250"
-                      width="170"
-                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
-                    <div
-                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
-                    >
-                      <div
-                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
-                      >
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
-                          ></path>
-                        </svg>
-                      </div></div
-                  ></a>
-                  <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
-                  >
-                    Vini Jr. (2025)
                   </h4>
                 </div>
 
@@ -793,9 +728,49 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Warfare
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+                    href="/single.html"
+                    ><img
+                      src="/images/4.webp"
+                      alt="Vini Jr. (2025)"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
+                  >
+                    Vini Jr. (2025)
                   </h4>
                 </div>
 
@@ -833,7 +808,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Snow White
                   </h4>
@@ -873,7 +848,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Late Show with David Letterman
                   </h4>
@@ -913,7 +888,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Parasite
                   </h4>
@@ -925,7 +900,7 @@
         </section>
 
         <!-- Most watched -->
-        <section class="xs:py-[18.75px] font-nunito py-[16.75px] sm:py-[20px]">
+        <section class="xs:py-[18.75px] py-[16.75px] sm:py-[20px]">
           <div class="mb-[22.75px] flex flex-row items-center justify-between">
             <div class="relative">
               <h3
@@ -936,7 +911,7 @@
               <div class="line"></div>
             </div>
             <a
-              class="xs:text-[12.75px] view-all-btn--light rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
+              class="xs:text-[12.75px] view-all-btn rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
               href="/browse-all.html"
               >View all</a
             >
@@ -978,7 +953,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Game of Thrones
                   </h4>
@@ -1018,49 +993,9 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Severance
-                  </h4>
-                </div>
-
-                <div
-                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
-                >
-                  <a
-                    class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
-                    href="/single.html"
-                    ><img
-                      src="/images/6.webp"
-                      alt="Parasite"
-                      height="250"
-                      width="170"
-                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
-                    <div
-                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
-                    >
-                      <div
-                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
-                      >
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
-                          ></path>
-                        </svg>
-                      </div></div
-                  ></a>
-                  <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
-                  >
-                    Parasite
                   </h4>
                 </div>
 
@@ -1098,9 +1033,49 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Avatar: The Last Airbender
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] relative h-[216px] w-[170px] overflow-hidden rounded-lg bg-[#f5f5f5] select-none dark:bg-[#1f1f1f]"
+                    href="/single.html"
+                    ><img
+                      src="/images/6.webp"
+                      alt="Parasite"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
+                  >
+                    Parasite
                   </h4>
                 </div>
 
@@ -1138,7 +1113,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Schindler's List
                   </h4>
@@ -1178,7 +1153,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     The Green Mile
                   </h4>
@@ -1218,7 +1193,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     The Shawshank Redemption
                   </h4>
@@ -1258,7 +1233,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Interstellar
                   </h4>
@@ -1270,7 +1245,7 @@
         </section>
 
         <!-- Top rated -->
-        <section class="xs:py-[18.75px] font-nunito py-[16.75px] sm:py-[20px]">
+        <section class="xs:py-[18.75px] py-[16.75px] sm:py-[20px]">
           <div class="mb-[22.75px] flex flex-row items-center justify-between">
             <div class="relative">
               <h3
@@ -1281,7 +1256,7 @@
               <div class="line"></div>
             </div>
             <a
-              class="xs:text-[12.75px] view-all-btn--light rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
+              class="xs:text-[12.75px] view-all-btn rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px] dark:text-gray-300"
               href="/browse-all.html"
               >View all</a
             >
@@ -1323,7 +1298,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Dark knight
                   </h4>
@@ -1363,7 +1338,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     The Shawshank Redemption
                   </h4>
@@ -1403,7 +1378,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Interstellar
                   </h4>
@@ -1443,7 +1418,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     The Godfather
                   </h4>
@@ -1483,7 +1458,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Arcane
                   </h4>
@@ -1523,7 +1498,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Game of Thrones
                   </h4>
@@ -1563,7 +1538,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Parasite
                   </h4>
@@ -1603,7 +1578,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     Schindler's List
                   </h4>
@@ -1643,7 +1618,7 @@
                       </div></div
                   ></a>
                   <h4
-                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium sm:text-base dark:text-gray-300"
+                    class="xs:text-[14.75px] cursor-default text-center text-[14px] font-medium capitalize sm:text-base dark:text-gray-300"
                   >
                     The Green Mile
                   </h4>
@@ -1656,7 +1631,100 @@
       </div>
     </main>
 
-    <footer class=""></footer>
+    <footer
+      class="xs:py-8 w-full py-[30px] sm:py-10 lg:py-16 dark:bg-black"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
+          url(&quot;/images/movies-bg.webp&quot;);
+        background-position: center center;
+        background-size: cover;
+      "
+    >
+      <div
+        class="xs:gap-[30px] mx-auto flex max-w-[1140px] flex-col items-center gap-6 px-4 sm:gap-8 sm:px-6 md:gap-12 md:px-8 lg:gap-14 xl:px-0"
+      >
+        <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
+          <svg
+            class="fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+            ></path>
+          </svg>
+          <span
+            class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
+          >
+            Popcorn
+          </span>
+        </a>
+        <ul
+          class="xs:gap-[6px] grid grid-cols-2 items-center justify-start gap-1 font-medium text-gray-300 capitalize sm:gap-2 md:gap-4 md:gap-x-16 md:gap-y-4"
+        >
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/"
+              >Home</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse-all.html"
+              >Most Watched</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/about.html"
+              >about us</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse-all.html"
+              >Recent releases</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/contact.html"
+              >Contact</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/"
+              >Top rated</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/"
+              >Privacy policy</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/"
+              >Terms and conditions
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
