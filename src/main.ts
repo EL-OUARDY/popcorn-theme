@@ -3,7 +3,11 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Load default theme from local storage
-  const _theme = localStorage.getItem("APP_THEME") || "light";
+  const localTheme = localStorage.getItem("APP_THEME");
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  const _theme = localTheme || (isDark ? "dark" : "light");
+
   changeTheme(_theme);
 
   // Theme toggle click
