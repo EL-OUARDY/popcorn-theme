@@ -144,6 +144,7 @@ a {
     transform: translate(-50%, -50%) !important;
 }
 
+/* Header */
 
 .header-bg {
     background: #fefefe;
@@ -159,6 +160,32 @@ a {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+}
+
+.header-bg-transparent nav.desktop {
+    @apply text-white bg-transparent
+}
+
+.header-bg-transparent ul.desktop li a {
+    @apply hover:text-secondary text-gray-300
+}
+
+.header-bg-transparent #theme-switcher, .header-bg-transparent #show-mobile-header-menu {
+    @apply hover:text-secondary text-gray-300
+}
+
+.header-bg-transparent ul.desktop li form input {
+    @apply text-gray-300;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.3));
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.header-bg-transparent ul.desktop li form button {
+    @apply text-primary
 }
 
 /* Swiper navigation buttons */

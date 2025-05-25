@@ -9,15 +9,15 @@
   </head>
   <body class="bg-background selection:bg-primary/20 font-sans">
     <header
-      class="header-bg fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
+      class="header-bg-transparent fixed top-0 left-0 z-101 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
     >
       <nav
-        class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
+        class="desktop mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
       >
         <!-- Logo -->
         <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
           <svg
-            class="dark:fill-primary h-[24px] w-[24px] fill-black sm:h-[28px] sm:w-[28px]"
+            class="fill-primary h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -37,7 +37,7 @@
         >
           <!-- Links menu -->
           <ul
-            class="hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex"
+            class="desktop hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex"
           >
             <li>
               <a
@@ -70,7 +70,7 @@
                     placeholder="Search"
                   />
                   <button
-                    class="abg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current"
+                    class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current"
                     type="submit"
                   >
                     <svg
@@ -97,7 +97,7 @@
             <button
               type="button"
               id="theme-switcher"
-              class="dark:hover:text-secondary dark:text-secondary dark:hover:text-secondary dark:text-secondary dark:hover:text-secondary dark:hover:text-secondary flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
+              class="dark:text-secondary dark:hover:text-secondary flex cursor-pointer items-center justify-center text-black transition-all duration-100 hover:scale-110 hover:text-black dark:text-gray-300"
             >
               <svg
                 class="sun dark:hidden"

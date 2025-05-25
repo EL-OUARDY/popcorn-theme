@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  // Header background change on scroll
+  window.addEventListener("scroll", handleHeaderBackgroundChange);
 });
 
 function changeTheme(theme: string | null = null) {
@@ -59,6 +62,25 @@ function changeTheme(theme: string | null = null) {
 function toggleMobileMenu() {
   const menu = document.querySelector(".mobile-menu");
   const isHidden = menu?.classList.contains("hidden");
-  if (isHidden) menu?.classList.remove("hidden");
-  else menu?.classList.add("hidden");
+  const body = document.body;
+  if (isHidden) {
+    menu?.classList.remove("hidden");
+    body?.classList.add("no-scroll");
+  } else {
+    menu?.classList.add("hidden");
+    body?.classList.remove("no-scroll");
+  }
+}
+
+function handleHeaderBackgroundChange() {
+  const body = document.body;
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 0 || parseFloat(body.style.top) * -1 > 0) {
+    header?.classList.add("header-bg");
+    header?.classList.remove("header-bg-transparent");
+  } else {
+    header?.classList.add("header-bg-transparent");
+    header?.classList.remove("header-bg");
+  }
 }
