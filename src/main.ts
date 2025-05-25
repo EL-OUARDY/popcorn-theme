@@ -18,7 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn?.addEventListener("click", () => toggleMobileMenu()),
   );
 
-  // Initialize swiper
+  // Initialize swipers
+  new Swiper(".swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 15,
+  });
   new Swiper(".hero-swiper", {
     loop: true,
     slidesPerView: 1,

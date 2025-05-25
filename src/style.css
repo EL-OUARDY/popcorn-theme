@@ -11,7 +11,7 @@
     /* Color palette */
     --color-black: #191624;
     --color-light-gray: #F1EFEE;
-    --color-primary: #FAFAFA;
+    --color-primary: #ff0000;
     --color-sec: #efefef;
     --color-nav: #BEBEBE;
     --color-main: #fefefe;
@@ -78,7 +78,7 @@ a {
     position: absolute;
     content: "";
     height: 2.75px;
-    background-color: #ff0000;
+    background-color: var(--color-primary);
     bottom: -4px;
 
     border-radius: 20px;
@@ -160,17 +160,16 @@ a {
 /* Swiper navigation buttons */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #ff0000 !important;
-    /* Change to your desired color */
+    color: var(--color-primary) !important;
 }
 
 /* Swiper pagination bullets */
 .swiper-pagination-bullet {
-    background: rgba(255, 255, 255, 0.5) !important;
     /* Inactive bullet color */
+    background: rgba(255, 255, 255, 0.5) !important;
 }
 
 .swiper-pagination-bullet-active {
-    background: #ff0000 !important;
     /* Active bullet color */
+    background: var(--color-primary) !important;
 }
