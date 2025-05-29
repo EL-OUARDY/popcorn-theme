@@ -6,6 +6,7 @@
 
 @layer base {
     :root {
+        --primary: #dc2626;
         --background: #fefefe;
         --foreground: #000;
         --foreground-muted: #efefef;
@@ -13,6 +14,7 @@
     }
 
     .dark {
+        --primary: #dc2626;
         --background: #191624;
         --foreground: #d1d5db;
         --foreground-muted: #374151;
@@ -25,7 +27,7 @@
     --breakpoint-xs: 380px;
 
     /* Color palette */
-    --color-primary: #dc2626;
+    --color-primary: var(--primary);
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-foreground-muted: var(--foreground-muted);
