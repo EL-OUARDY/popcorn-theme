@@ -211,3 +211,37 @@ a {
     /* Active bullet color */
     background: var(--color-primary) !important;
 }
+
+
+/* Expandable text - Show more */
+.show-more-checkbox {
+    display: none;
+}
+
+.truncated-text {
+    max-height: 4.8em;
+    /* Show about 3 lines */
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease;
+}
+
+/* Style the button */
+.show-more-btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* When checkbox is checked, expand the text */
+.show-more-checkbox:checked+.movie-description .truncated-text {
+    max-height: none;
+}
+
+/* Change button text when expanded */
+.show-more-btn::after {
+    content: " more";
+}
+
+.show-more-checkbox:checked~.show-more-btn::after {
+    content: " less";
+}
