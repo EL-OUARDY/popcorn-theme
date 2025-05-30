@@ -92,11 +92,6 @@ a {
     border-radius: 20px;
 }
 
-.rtl .nav-link::after,
-.rtl .line {
-    right: 0 !important;
-}
-
 .nav-link::after {
     width: 0;
     left: 50%;
@@ -213,11 +208,6 @@ a {
     background: var(--color-primary) !important;
 }
 
-/* Swiper on RTL */
-.rtl .swiper {
-    direction: rtl !important;
-}
-
 
 /* Expandable text - Show more */
 .show-more-checkbox {
@@ -253,7 +243,9 @@ a {
 }
 
 /* RTL direction */
-.rtl footer ul,
-.rtl .movies-grid {
+.rtl,
+.rtl .swiper,
+.rtl .movies-grid,
+.rtl footer ul {
     direction: rtl !important;
 }
