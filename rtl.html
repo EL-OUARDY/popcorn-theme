@@ -1,0 +1,1742 @@
+<!doctype html>
+<html lang="ar" class="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بوب ستريم</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  </head>
+  <body class="bg-background selection:bg-primary/20 text-foreground font-sans">
+    <header
+      class="header-bg-transparent fixed top-0 left-0 z-101 w-full py-[14.5px] transition-all duration-50 md:py-[16px] rtl:text-right"
+    >
+      <nav
+        class="desktop mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0 rtl:flex-row-reverse"
+      >
+        <!-- Logo -->
+        <a
+          href="/"
+          class="flex items-center gap-x-2 text-lg font-bold rtl:flex-row-reverse"
+        >
+          <svg
+            class="fill-primary h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+            ></path>
+          </svg>
+          <span
+            class="text-[16.75px] font-semibold tracking-wide sm:text-[18px] dark:text-white"
+          >
+            بوب ستريم
+          </span>
+        </a>
+
+        <div
+          class="flex flex-row items-center gap-4 md:gap-8 rtl:flex-row-reverse"
+        >
+          <!-- Links menu -->
+          <ul
+            class="desktop hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex rtl:flex-row-reverse"
+          >
+            <li>
+              <a href="/" class="nav-link active">الرئيسية</a>
+            </li>
+            <li>
+              <a href="/browse.html" class="nav-link">أفلام</a>
+            </li>
+            <li>
+              <a href="/browse.html" class="nav-link">مسلسلات</a>
+            </li>
+            <li>
+              <form action="/search" class="w-full">
+                <div class="relative">
+                  <input
+                    type="text"
+                    name="q"
+                    class="header-bg dark:text-foreground w-full rounded-full px-4 py-1 pr-8 shadow placeholder:italic rtl:pr-4 rtl:pl-8 rtl:text-right"
+                    placeholder="بحث"
+                  />
+                  <button
+                    class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current rtl:left-3"
+                    type="submit"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </li>
+          </ul>
+          <!-- Theme switch -->
+          <div class="button relative">
+            <button
+              type="button"
+              id="theme-switcher"
+              class="flex cursor-pointer items-center justify-center transition-all duration-100 hover:scale-110"
+              aria-label="تغيير المظهر"
+            >
+              <svg
+                class="sun dark:hidden"
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg
+                class="moon hidden dark:block"
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                ></path>
+                <path
+                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Mobile menu trigger -->
+          <button
+            type="button"
+            name="menu"
+            class="inline-block cursor-pointer text-[22.75px] transition-all duration-300 md:hidden"
+            id="show-mobile-header-menu"
+            aria-label="القائمة"
+          >
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile menu -->
+      <div
+        class="mobile-menu bg-background dark:bg-foreground fixed inset-0 z-100 hidden h-screen w-full"
+        style="
+          background-image:
+            linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
+            url(&quot;/images/background.webp&quot;);
+          background-position: center center;
+          background-size: cover;
+        "
+      >
+        <div class="flex h-full flex-col">
+          <div
+            class="header-bg-transparent fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
+          >
+            <nav
+              class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0 rtl:flex-row-reverse"
+            >
+              <!-- Logo -->
+              <a
+                href="/"
+                class="flex items-center gap-x-2 text-lg font-bold rtl:flex-row-reverse"
+              >
+                <svg
+                  class="fill-primary h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                  ></path>
+                </svg>
+                <span
+                  class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
+                >
+                  بوب ستريم
+                </span>
+              </a>
+
+              <div
+                class="dark:text-foreground text-foreground-muted flex flex-row items-center gap-4 md:gap-8"
+              >
+                <!-- Mobile menu close button -->
+                <button
+                  type="button"
+                  name="menu"
+                  class="text-foreground-inverse dark:text-foreground inline-block cursor-pointer text-[22.75px] transition-all duration-300"
+                  id="close-mobile-header-menu"
+                  aria-label="إغلاق القائمة"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-x-icon lucide-x"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
+                </button>
+              </div>
+            </nav>
+          </div>
+
+          <div class="flex flex-1 flex-col">
+            <ul
+              class="flex h-full flex-col items-center justify-center gap-8 text-lg font-medium capitalize"
+            >
+              <li>
+                <form
+                  class="flex flex-row items-center justify-center pt-6 text-[14px] sm:pt-8 sm:pb-10 md:pt-9 md:pb-10 lg:py-10 rtl:flex-row-reverse"
+                >
+                  <input
+                    type="text"
+                    class="dark:text-foreground text-foreground-inverse w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px] rtl:pr-[20px] rtl:pl-[36px] rtl:text-right"
+                    placeholder="بحث"
+                    name="search"
+                  /><button
+                    type="submit"
+                    class="text-primary z-[1] -ml-[32px] text-[18px] rtl:-mr-[32px] rtl:ml-0"
+                    aria-label="بحث"
+                  >
+                    <svg
+                      stroke="currentColor"
+                      fill="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 16 16"
+                      height="1em"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
+                      ></path>
+                    </svg>
+                  </button>
+                </form>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  class="nav-link active text-foreground-inverse dark:text-foreground"
+                  >الرئيسية</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/browse.html"
+                  class="nav-link text-foreground-inverse dark:text-foreground"
+                  >أفلام</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/browse.html"
+                  class="nav-link text-foreground-inverse dark:text-foreground"
+                  >مسلسلات</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <p
+            class="xs:text-[12px] dark:text-foreground mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6"
+          >
+            © 2025 بوب ستريم. جميع الحقوق محفوظة.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14">
+      <!-- Hero section -->
+      <div
+        class="hero-swiper xs:h-[520px] h-[460px] w-full overflow-hidden sm:h-[640px] lg:h-screen"
+      >
+        <div class="swiper-pagination hidden lg:block"></div>
+
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide !size-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/3-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0 rtl:flex-row-reverse"
+            >
+              <div
+                class="xs:gap-3 dark:text-foreground text-foreground-inverse flex max-w-[90vw] flex-col gap-[10px] sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
+                >
+                  رجل المهام
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
+                >
+                  ترك ليفون كيد وراءه مسيرة عسكرية مرموقة في العمليات السرية
+                  ليعيش حياة بسيطة في مجال البناء. لكن عندما تُختطف ابنة رئيسه،
+                  التي تعتبر كأنها من عائلته، على يد تجار البشر، يكشف بحثه
+                  لإعادتها إلى المنزل عن عالم من الفساد أكبر بكثير مما كان
+                  يتخيله.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6 rtl:flex-row-reverse"
+                >
+                  <a
+                    href="/single.html#trailer"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    شاهد الإعلان</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    شاهد الآن
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
+                <div class="h-[380px] w-[254px]">
+                  <img
+                    src="/images/3.webp"
+                    alt="رجل عامل"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide !size-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/1-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0 rtl:flex-row-reverse"
+            >
+              <div
+                class="xs:gap-3 dark:text-foreground text-foreground-inverse flex max-w-[90vw] flex-col gap-[10px] sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
+                >
+                  الشطر
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
+                >
+                  يقود مارك فريقاً من موظفي المكتب الذين تم فصل ذكرياتهم جراحياً
+                  بين حياتهم المهنية والشخصية. عندما يظهر زميل غامض خارج العمل،
+                  تبدأ رحلة لاكتشاف الحقيقة حول وظائفهم.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6 rtl:flex-row-reverse"
+                >
+                  <a
+                    href="/single.html#trailer"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    شاهد الإعلان</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    شاهد الآن
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
+                <div class="h-[380px] w-[254px]">
+                  <img
+                    src="/images/1.webp"
+                    alt="انفصال"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide !size-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/2-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0 rtl:flex-row-reverse"
+            >
+              <div
+                class="xs:gap-3 dark:text-foreground text-foreground-inverse flex max-w-[90vw] flex-col gap-[10px] sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
+                >
+                  سنو وايت
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
+                >
+                  بعد اختفاء الملك الخير، سيطرت الملكة الشريرة على الأرض العادلة
+                  بقسوة. تهرب الأميرة بياض الثلج من القصر عندما تحاول الملكة
+                  قتلها بسبب غيرتها من جمال بياض الثلج الداخلي. في أعماق الغابة
+                  المظلمة، تعثر على سبعة أقزام سحريين وشاب لص يدعى جوناثان.
+                  معاً، يسعون للبقاء على قيد الحياة من مطاردة الملكة المستمرة
+                  ويطمحون لاستعادة المملكة.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6 rtl:flex-row-reverse"
+                >
+                  <a
+                    href="/single.html#trailer"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    شاهد الإعلان</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    شاهد الآن
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
+                <div class="h-[380px] w-[254px]">
+                  <img
+                    src="/images/2.webp"
+                    alt="بياض الثلج"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide !size-full will-change-transform motion-reduce:transform-none"
+            style="
+              background-image:
+                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+                url(&quot;/images/4-wide.webp&quot;);
+              background-position: center center;
+              background-size: cover;
+              width: 1041px;
+            "
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0 rtl:flex-row-reverse"
+            >
+              <div
+                class="xs:gap-3 dark:text-foreground text-foreground-inverse flex max-w-[90vw] flex-col gap-[10px] sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
+                >
+                  فينيسيوس جونيور (2025)
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
+                >
+                  فينيسيوس جونيور لديه كل شيء: الموهبة والمرونة والجرأة. تابع
+                  قدميه الراقصة التي لا يمكن التنبؤ بها في رحلته الملهمة ليصبح
+                  نجم كرة قدم عالمي.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6 rtl:flex-row-reverse"
+                >
+                  <a
+                    href="/single.html#trailer"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    شاهد الإعلان</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    شاهد الآن
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
+                <div class="h-[380px] w-[254px]">
+                  <img
+                    src="/images/4.webp"
+                    alt="فينيسيوس جونيور"
+                    height="380"
+                    width="254"
+                    class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="xs:mt-4 mx-auto mt-2 max-w-[1140px] px-4 sm:mt-6 sm:px-6 md:mt-8 md:px-8 lg:mt-12 xl:px-0"
+      >
+        <!-- Latest releases -->
+        <section class="xs:py-[18.75px] py-[16.75px] sm:py-[20px]">
+          <div
+            class="mb-[22.75px] flex flex-row items-center justify-between rtl:flex-row-reverse"
+          >
+            <div class="relative">
+              <h3
+                class="xs:text-[20px] text-[18.75px] font-semibold sm:text-[22.25px] sm:font-bold dark:text-gray-50"
+              >
+                آخر الإصدارات
+              </h3>
+              <div class="line"></div>
+            </div>
+            <a
+              class="xs:text-[12.75px] view-all-btn dark:text-foreground rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px]"
+              href="/browse.html"
+              >عرض الكل</a
+            >
+          </div>
+          <div class="xs:h-[309px] h-[266px] sm:h-[312px]">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/13.webp"
+                      alt="Mission Impossible"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    مهمة مستحيلة - الحساب النهائي
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/3.webp"
+                      alt="رجل المهام"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    رجل المهام
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/11.webp"
+                      alt="Late night show"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    برنامج "ليلة متأخرة مع سيث مايرز"
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/12.webp"
+                      alt="الحرب"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    الحرب
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/4.webp"
+                      alt="فيني جونيور (2025)"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    فيني جونيور (2025)
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/2.webp"
+                      alt="سنو وايت"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    سنو وايت
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/16.webp"
+                      alt="برنامج Late Show مع ديفيد ليترمان"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    برنامج Late Show مع ديفيد ليترمان
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/6.webp"
+                      alt="طفيلي"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    طفيلي
+                  </h4>
+                </div>
+              </div>
+              <!-- .swiper-wrapper -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Most watched -->
+        <section class="xs:py-[18.75px] py-[16.75px] sm:py-[20px]">
+          <div
+            class="mb-[22.75px] flex flex-row items-center justify-between rtl:flex-row-reverse"
+          >
+            <div class="relative">
+              <h3
+                class="xs:text-[20px] text-[18.75px] font-semibold sm:text-[22.25px] sm:font-bold dark:text-gray-50"
+              >
+                الأكثر مشاهدة
+              </h3>
+              <div class="line"></div>
+            </div>
+            <a
+              class="xs:text-[12.75px] view-all-btn dark:text-foreground rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px]"
+              href="/browse.html"
+              >عرض الكل</a
+            >
+          </div>
+          <div class="xs:h-[309px] h-[266px] sm:h-[312px]">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/1.webp"
+                      alt="الشطر"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    الشطر
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/5.webp"
+                      alt="لعبة العروش"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    لعبة العروش
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/15.webp"
+                      alt="أفاتار: آخر مسخر هواء"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    أفاتار: آخر مسخر هواء
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/6.webp"
+                      alt="طفيلي"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    طفيلي
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/14.webp"
+                      alt="قائمة شندلر"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    قائمة شندلر
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/17.webp"
+                      alt="الميل الأخضر"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    الميل الأخضر
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/7.webp"
+                      alt="الفداء من شاوشانك"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    الفداء من شاوشانك
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/9.webp"
+                      alt="بين النجوم"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    بين النجوم
+                  </h4>
+                </div>
+              </div>
+              <!-- .swiper-wrapper -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Top rated -->
+        <section class="xs:py-[18.75px] py-[16.75px] sm:py-[20px]">
+          <div
+            class="mb-[22.75px] flex flex-row items-center justify-between rtl:flex-row-reverse"
+          >
+            <div class="relative">
+              <h3
+                class="xs:text-[20px] text-[18.75px] font-semibold sm:text-[22.25px] sm:font-bold dark:text-gray-50"
+              >
+                الأعلى تقييماً
+              </h3>
+              <div class="line"></div>
+            </div>
+            <a
+              class="xs:text-[12.75px] view-all-btn dark:text-foreground rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px]"
+              href="/browse.html"
+              >عرض الكل</a
+            >
+          </div>
+          <div class="xs:h-[309px] h-[266px] sm:h-[312px]">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/10.webp"
+                      alt="فارس الظلام"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    فارس الظلام
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/7.webp"
+                      alt="الفداء من شاوشانك"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    الفداء من شاوشانك
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/9.webp"
+                      alt="بين النجوم"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    بين النجوم
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/18.webp"
+                      alt="العراب"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    العراب
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/8.webp"
+                      alt="غامض"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    غامض
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/5.webp"
+                      alt="لعبة العروش"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    لعبة العروش
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/6.webp"
+                      alt="طفيلي"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    طفيلي
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/14.webp"
+                      alt="قائمة شندلر"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    قائمة شندلر
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      src="/images/17.webp"
+                      alt="الميل الأخضر"
+                      height="250"
+                      width="170"
+                      class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    الميل الأخضر
+                  </h4>
+                </div>
+              </div>
+              <!-- .swiper-wrapper -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer
+      class="xs:py-8 dark:bg-foreground w-full py-[30px] sm:py-10 lg:py-16"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
+          url(&quot;/images/background.webp&quot;);
+        background-position: center center;
+        background-size: cover;
+      "
+    >
+      <div
+        class="xs:gap-[30px] mx-auto flex max-w-[1140px] flex-col items-center gap-6 px-4 sm:gap-8 sm:px-6 md:gap-12 md:px-8 lg:gap-14 xl:px-0"
+      >
+        <a
+          href="/"
+          class="flex items-center gap-x-2 text-lg font-bold rtl:flex-row-reverse"
+        >
+          <svg
+            class="fill-primary fill-foreground h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+            ></path>
+          </svg>
+          <span
+            class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
+          >
+            بوب ستريم
+          </span>
+        </a>
+        <ul
+          class="xs:gap-[6px] dark:text-foreground text-foreground-inverse grid grid-cols-2 items-center justify-start gap-1 font-medium capitalize sm:gap-2 md:gap-4 md:gap-x-16 md:gap-y-4 rtl:text-right"
+        >
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/"
+              >الرئيسية</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >الأكثر مشاهدة</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/about.html"
+              >من نحن</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >أحدث الإصدارات</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/contact.html"
+              >تواصل معنا</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >الأعلى تقييماً</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/privacy.html"
+              >سياسة الخصوصية</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/privacy.html"
+              >الشروط والأحكام
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

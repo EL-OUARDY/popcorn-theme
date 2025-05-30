@@ -15,6 +15,7 @@ export default defineConfig({
         about: "/about.html",
         contact: "/contact.html",
         privacy: "/privacy.html",
+        rtl: "/rtl.html",
       },
     },
   },
