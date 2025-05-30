@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="ar" class="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PopStream</title>
-    <link rel="stylesheet" href="src/font-en.css" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="assets/css/font-ar.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   </head>
   <body class="bg-background selection:bg-primary/20 text-foreground font-sans">
     <header
-      class="header-bg-transparent fixed top-0 left-0 z-101 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
+      class="header-bg-transparent fixed top-0 left-0 z-101 w-full py-[14.5px] transition-all duration-50 md:py-[16px] rtl:text-right"
     >
       <nav
         class="desktop mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0 rtl:flex-row-reverse"
@@ -32,7 +32,7 @@
           <span
             class="text-[16.75px] font-semibold tracking-wide sm:text-[18px] dark:text-white"
           >
-            PopStream
+            بوب ستريم
           </span>
         </a>
 
@@ -44,13 +44,13 @@
             class="desktop hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex rtl:flex-row-reverse"
           >
             <li>
-              <a href="/" class="nav-link active">Home</a>
+              <a href="/" class="nav-link active">الرئيسية</a>
             </li>
             <li>
-              <a href="/browse.html" class="nav-link">Movies</a>
+              <a href="/browse.html" class="nav-link">أفلام</a>
             </li>
             <li>
-              <a href="/browse.html" class="nav-link">TV Shows</a>
+              <a href="/browse.html" class="nav-link">مسلسلات</a>
             </li>
             <li>
               <form action="/search" class="w-full">
@@ -59,7 +59,7 @@
                     type="text"
                     name="q"
                     class="header-bg dark:text-foreground w-full rounded-full px-4 py-1 pr-8 shadow placeholder:italic rtl:pr-4 rtl:pl-8 rtl:text-right"
-                    placeholder="Search"
+                    placeholder="بحث"
                   />
                   <button
                     class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current rtl:left-3"
@@ -90,6 +90,7 @@
               type="button"
               id="theme-switcher"
               class="flex cursor-pointer items-center justify-center transition-all duration-100 hover:scale-110"
+              aria-label="تغيير المظهر"
             >
               <svg
                 class="sun dark:hidden"
@@ -138,6 +139,7 @@
             name="menu"
             class="inline-block cursor-pointer text-[22.75px] transition-all duration-300 md:hidden"
             id="show-mobile-header-menu"
+            aria-label="القائمة"
           >
             <svg
               stroke="currentColor"
@@ -190,7 +192,7 @@
                 <span
                   class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
                 >
-                  PopStream
+                  بوب ستريم
                 </span>
               </a>
 
@@ -203,6 +205,7 @@
                   name="menu"
                   class="text-foreground-inverse dark:text-foreground inline-block cursor-pointer text-[22.75px] transition-all duration-300"
                   id="close-mobile-header-menu"
+                  aria-label="إغلاق القائمة"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -235,11 +238,12 @@
                   <input
                     type="text"
                     class="dark:text-foreground text-foreground-inverse w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px] rtl:pr-[20px] rtl:pl-[36px] rtl:text-right"
-                    placeholder="Search"
+                    placeholder="بحث"
                     name="search"
                   /><button
                     type="submit"
                     class="text-primary z-[1] -ml-[32px] text-[18px] rtl:-mr-[32px] rtl:ml-0"
+                    aria-label="بحث"
                   >
                     <svg
                       stroke="currentColor"
@@ -262,21 +266,21 @@
                 <a
                   href="/"
                   class="nav-link active text-foreground-inverse dark:text-foreground"
-                  >Home</a
+                  >الرئيسية</a
                 >
               </li>
               <li>
                 <a
                   href="/browse.html"
                   class="nav-link text-foreground-inverse dark:text-foreground"
-                  >Movies</a
+                  >أفلام</a
                 >
               </li>
               <li>
                 <a
                   href="/browse.html"
                   class="nav-link text-foreground-inverse dark:text-foreground"
-                  >TV Shows</a
+                  >مسلسلات</a
                 >
               </li>
             </ul>
@@ -285,7 +289,7 @@
           <p
             class="xs:text-[12px] dark:text-foreground mt-auto mb-[20px] text-center text-[11.75px] sm:mb-6"
           >
-            © 2025 by PopStream. All right reserved.
+            © 2025 بوب ستريم. جميع الحقوق محفوظة.
           </p>
         </div>
       </div>
@@ -319,17 +323,16 @@
                 <h2
                   class="xs:text-3xl xs:leading-normal xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
                 >
-                  A Working Man
+                  رجل المهام
                 </h2>
                 <p
                   class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
                 >
-                  Levon Cade left behind a decorated military career in the
-                  black ops to live a simple life working construction. But when
-                  his boss's daughter, who is like family to him, is taken by
-                  human traffickers, his search to bring her home uncovers a
-                  world of corruption far greater than he ever could have
-                  imagined.
+                  ترك ليفون كيد وراءه مسيرة عسكرية مرموقة في العمليات السرية
+                  ليعيش حياة بسيطة في مجال البناء. لكن عندما تُختطف ابنة رئيسه،
+                  التي تعتبر كأنها من عائلته، على يد تجار البشر، يكشف بحثه
+                  لإعادتها إلى المنزل عن عالم من الفساد أكبر بكثير مما كان
+                  يتخيله.
                 </p>
                 <div
                   class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6 rtl:flex-row-reverse"
@@ -339,13 +342,13 @@
                     name="watch-trailer"
                     class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
-                    Watch trailer</a
+                    شاهد الإعلان</a
                   ><a
                     href="/single.html"
                     name="watch-now"
                     class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
-                    Watch now
+                    شاهد الآن
                   </a>
                 </div>
               </div>
@@ -353,7 +356,7 @@
                 <div class="h-[380px] w-[254px]">
                   <img
                     src="/images/3.webp"
-                    alt="A Working Man"
+                    alt="رجل عامل"
                     height="380"
                     width="254"
                     class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
@@ -383,15 +386,14 @@
                 <h2
                   class="xs:text-3xl xs:leading-normal xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
                 >
-                  Severance
+                  الشطر
                 </h2>
                 <p
                   class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
                 >
-                  Mark leads a team of office workers whose memories have been
-                  surgically divided between their work and personal lives. When
-                  a mysterious colleague appears outside of work, it begins a
-                  journey to discover the truth about their jobs.
+                  يقود مارك فريقاً من موظفي المكتب الذين تم فصل ذكرياتهم جراحياً
+                  بين حياتهم المهنية والشخصية. عندما يظهر زميل غامض خارج العمل،
+                  تبدأ رحلة لاكتشاف الحقيقة حول وظائفهم.
                 </p>
                 <div
                   class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6 rtl:flex-row-reverse"
@@ -401,13 +403,13 @@
                     name="watch-trailer"
                     class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
-                    Watch trailer</a
+                    شاهد الإعلان</a
                   ><a
                     href="/single.html"
                     name="watch-now"
                     class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
-                    Watch now
+                    شاهد الآن
                   </a>
                 </div>
               </div>
@@ -415,7 +417,7 @@
                 <div class="h-[380px] w-[254px]">
                   <img
                     src="/images/1.webp"
-                    alt="A Working Man"
+                    alt="انفصال"
                     height="380"
                     width="254"
                     class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
@@ -445,19 +447,17 @@
                 <h2
                   class="xs:text-3xl xs:leading-normal xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
                 >
-                  Snow White
+                  سنو وايت
                 </h2>
                 <p
                   class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
                 >
-                  Following the benevolent King's disappearance, the Evil Queen
-                  dominated the once fair land with a cruel streak. Princess
-                  Snow White flees the castle when the Queen, in her jealousy
-                  over Snow White's inner beauty, tries to kill her. Deep into
-                  the dark woods, she stumbles upon seven magical dwarves and a
-                  young bandit named Jonathan. Together, they strive to survive
-                  the Queen's relentless pursuit and aspire to take back the
-                  kingdom.
+                  بعد اختفاء الملك الخير، سيطرت الملكة الشريرة على الأرض العادلة
+                  بقسوة. تهرب الأميرة بياض الثلج من القصر عندما تحاول الملكة
+                  قتلها بسبب غيرتها من جمال بياض الثلج الداخلي. في أعماق الغابة
+                  المظلمة، تعثر على سبعة أقزام سحريين وشاب لص يدعى جوناثان.
+                  معاً، يسعون للبقاء على قيد الحياة من مطاردة الملكة المستمرة
+                  ويطمحون لاستعادة المملكة.
                 </p>
                 <div
                   class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6 rtl:flex-row-reverse"
@@ -467,13 +467,13 @@
                     name="watch-trailer"
                     class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
-                    Watch trailer</a
+                    شاهد الإعلان</a
                   ><a
                     href="/single.html"
                     name="watch-now"
                     class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
-                    Watch now
+                    شاهد الآن
                   </a>
                 </div>
               </div>
@@ -481,7 +481,7 @@
                 <div class="h-[380px] w-[254px]">
                   <img
                     src="/images/2.webp"
-                    alt="A Working Man"
+                    alt="بياض الثلج"
                     height="380"
                     width="254"
                     class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
@@ -511,14 +511,14 @@
                 <h2
                   class="xs:text-3xl xs:leading-normal xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
                 >
-                  Vini Jr. (2025)
+                  فينيسيوس جونيور (2025)
                 </h2>
                 <p
                   class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
                 >
-                  Vini Jr. has it all: talent, resilience and boldness. Follow
-                  his dancing, unpredictable feet on his inspiring journey to
-                  becoming a global soccer star.
+                  فينيسيوس جونيور لديه كل شيء: الموهبة والمرونة والجرأة. تابع
+                  قدميه الراقصة التي لا يمكن التنبؤ بها في رحلته الملهمة ليصبح
+                  نجم كرة قدم عالمي.
                 </p>
                 <div
                   class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6 rtl:flex-row-reverse"
@@ -528,13 +528,13 @@
                     name="watch-trailer"
                     class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
-                    Watch trailer</a
+                    شاهد الإعلان</a
                   ><a
                     href="/single.html"
                     name="watch-now"
                     class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
-                    Watch now
+                    شاهد الآن
                   </a>
                 </div>
               </div>
@@ -542,7 +542,7 @@
                 <div class="h-[380px] w-[254px]">
                   <img
                     src="/images/4.webp"
-                    alt="A Working Man"
+                    alt="فينيسيوس جونيور"
                     height="380"
                     width="254"
                     class="rounded-xl object-cover opacity-100 shadow-lg transition-all duration-300 ease-in"
@@ -566,14 +566,14 @@
               <h3
                 class="xs:text-[20px] text-[18.75px] font-semibold sm:text-[22.25px] sm:font-bold dark:text-gray-50"
               >
-                Latest Releases
+                آخر الإصدارات
               </h3>
               <div class="line"></div>
             </div>
             <a
               class="xs:text-[12.75px] view-all-btn dark:text-foreground rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px]"
               href="/browse.html"
-              >View all</a
+              >عرض الكل</a
             >
           </div>
           <div class="xs:h-[309px] h-[266px] sm:h-[312px]">
@@ -615,7 +615,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Mission Impossible - The Final Reckoning
+                    مهمة مستحيلة - الحساب النهائي
                   </h4>
                 </div>
 
@@ -627,7 +627,7 @@
                     href="/single.html"
                     ><img
                       src="/images/3.webp"
-                      alt="A working man"
+                      alt="رجل المهام"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -655,7 +655,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    A working man
+                    رجل المهام
                   </h4>
                 </div>
 
@@ -695,7 +695,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Late Night with Seth Meyers
+                    برنامج "ليلة متأخرة مع سيث مايرز"
                   </h4>
                 </div>
 
@@ -707,7 +707,7 @@
                     href="/single.html"
                     ><img
                       src="/images/12.webp"
-                      alt="Warfare"
+                      alt="الحرب"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -735,7 +735,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Warfare
+                    الحرب
                   </h4>
                 </div>
 
@@ -747,7 +747,7 @@
                     href="/single.html"
                     ><img
                       src="/images/4.webp"
-                      alt="Vini Jr. (2025)"
+                      alt="فيني جونيور (2025)"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -775,7 +775,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Vini Jr. (2025)
+                    فيني جونيور (2025)
                   </h4>
                 </div>
 
@@ -787,7 +787,7 @@
                     href="/single.html"
                     ><img
                       src="/images/2.webp"
-                      alt="Snow White"
+                      alt="سنو وايت"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -815,7 +815,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Snow White
+                    سنو وايت
                   </h4>
                 </div>
 
@@ -827,7 +827,7 @@
                     href="/single.html"
                     ><img
                       src="/images/16.webp"
-                      alt="Late Show with David Letterman"
+                      alt="برنامج Late Show مع ديفيد ليترمان"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -855,7 +855,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Late Show with David Letterman
+                    برنامج Late Show مع ديفيد ليترمان
                   </h4>
                 </div>
 
@@ -867,7 +867,7 @@
                     href="/single.html"
                     ><img
                       src="/images/6.webp"
-                      alt="Parasite"
+                      alt="طفيلي"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -895,7 +895,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Parasite
+                    طفيلي
                   </h4>
                 </div>
               </div>
@@ -913,14 +913,14 @@
               <h3
                 class="xs:text-[20px] text-[18.75px] font-semibold sm:text-[22.25px] sm:font-bold dark:text-gray-50"
               >
-                Most Watched
+                الأكثر مشاهدة
               </h3>
               <div class="line"></div>
             </div>
             <a
               class="xs:text-[12.75px] view-all-btn dark:text-foreground rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px]"
               href="/browse.html"
-              >View all</a
+              >عرض الكل</a
             >
           </div>
           <div class="xs:h-[309px] h-[266px] sm:h-[312px]">
@@ -934,7 +934,7 @@
                     href="/single.html"
                     ><img
                       src="/images/1.webp"
-                      alt="Severance"
+                      alt="الشطر"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -962,7 +962,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Severance
+                    الشطر
                   </h4>
                 </div>
 
@@ -974,7 +974,7 @@
                     href="/single.html"
                     ><img
                       src="/images/5.webp"
-                      alt="Game of Thrones"
+                      alt="لعبة العروش"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1002,7 +1002,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Game of Thrones
+                    لعبة العروش
                   </h4>
                 </div>
 
@@ -1014,7 +1014,7 @@
                     href="/single.html"
                     ><img
                       src="/images/15.webp"
-                      alt="Avatar: The Last Airbender"
+                      alt="أفاتار: آخر مسخر هواء"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1042,7 +1042,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Avatar: The Last Airbender
+                    أفاتار: آخر مسخر هواء
                   </h4>
                 </div>
 
@@ -1054,7 +1054,7 @@
                     href="/single.html"
                     ><img
                       src="/images/6.webp"
-                      alt="Parasite"
+                      alt="طفيلي"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1082,7 +1082,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Parasite
+                    طفيلي
                   </h4>
                 </div>
 
@@ -1094,7 +1094,7 @@
                     href="/single.html"
                     ><img
                       src="/images/14.webp"
-                      alt="Schindler's List"
+                      alt="قائمة شندلر"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1122,7 +1122,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Schindler's List
+                    قائمة شندلر
                   </h4>
                 </div>
 
@@ -1134,7 +1134,7 @@
                     href="/single.html"
                     ><img
                       src="/images/17.webp"
-                      alt="The Green Mile"
+                      alt="الميل الأخضر"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1162,7 +1162,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    The Green Mile
+                    الميل الأخضر
                   </h4>
                 </div>
 
@@ -1174,7 +1174,7 @@
                     href="/single.html"
                     ><img
                       src="/images/7.webp"
-                      alt="The Shawshank Redemption"
+                      alt="الفداء من شاوشانك"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1202,7 +1202,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    The Shawshank Redemption
+                    الفداء من شاوشانك
                   </h4>
                 </div>
 
@@ -1214,7 +1214,7 @@
                     href="/single.html"
                     ><img
                       src="/images/9.webp"
-                      alt="Interstellar"
+                      alt="بين النجوم"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1242,7 +1242,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Interstellar
+                    بين النجوم
                   </h4>
                 </div>
               </div>
@@ -1260,14 +1260,14 @@
               <h3
                 class="xs:text-[20px] text-[18.75px] font-semibold sm:text-[22.25px] sm:font-bold dark:text-gray-50"
               >
-                Top Rated
+                الأعلى تقييماً
               </h3>
               <div class="line"></div>
             </div>
             <a
               class="xs:text-[12.75px] view-all-btn dark:text-foreground rounded-full px-3 py-[2px] text-[12px] transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-1 sm:text-[14px]"
               href="/browse.html"
-              >View all</a
+              >عرض الكل</a
             >
           </div>
           <div class="xs:h-[309px] h-[266px] sm:h-[312px]">
@@ -1281,7 +1281,7 @@
                     href="/single.html"
                     ><img
                       src="/images/10.webp"
-                      alt="Dark Knight"
+                      alt="فارس الظلام"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1309,7 +1309,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Dark knight
+                    فارس الظلام
                   </h4>
                 </div>
 
@@ -1321,7 +1321,7 @@
                     href="/single.html"
                     ><img
                       src="/images/7.webp"
-                      alt="The Shawshank Redemption"
+                      alt="الفداء من شاوشانك"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1349,7 +1349,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    The Shawshank Redemption
+                    الفداء من شاوشانك
                   </h4>
                 </div>
 
@@ -1361,7 +1361,7 @@
                     href="/single.html"
                     ><img
                       src="/images/9.webp"
-                      alt="Interstellar"
+                      alt="بين النجوم"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1389,7 +1389,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Interstellar
+                    بين النجوم
                   </h4>
                 </div>
 
@@ -1401,7 +1401,7 @@
                     href="/single.html"
                     ><img
                       src="/images/18.webp"
-                      alt="The Godfather"
+                      alt="العراب"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1429,7 +1429,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    The Godfather
+                    العراب
                   </h4>
                 </div>
 
@@ -1441,7 +1441,7 @@
                     href="/single.html"
                     ><img
                       src="/images/8.webp"
-                      alt="Arcane"
+                      alt="غامض"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1469,7 +1469,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Arcane
+                    غامض
                   </h4>
                 </div>
 
@@ -1481,7 +1481,7 @@
                     href="/single.html"
                     ><img
                       src="/images/5.webp"
-                      alt="Game of Thrones"
+                      alt="لعبة العروش"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1509,7 +1509,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Game of Thrones
+                    لعبة العروش
                   </h4>
                 </div>
 
@@ -1521,7 +1521,7 @@
                     href="/single.html"
                     ><img
                       src="/images/6.webp"
-                      alt="Parasite"
+                      alt="طفيلي"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1549,7 +1549,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Parasite
+                    طفيلي
                   </h4>
                 </div>
 
@@ -1561,7 +1561,7 @@
                     href="/single.html"
                     ><img
                       src="/images/14.webp"
-                      alt="Schindler's List"
+                      alt="قائمة شندلر"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1589,7 +1589,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    Schindler's List
+                    قائمة شندلر
                   </h4>
                 </div>
 
@@ -1601,7 +1601,7 @@
                     href="/single.html"
                     ><img
                       src="/images/17.webp"
-                      alt="The Green Mile"
+                      alt="الميل الأخضر"
                       height="250"
                       width="170"
                       class="scale-100 rounded-lg object-cover opacity-100 shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
@@ -1629,7 +1629,7 @@
                   <h4
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
-                    The Green Mile
+                    الميل الأخضر
                   </h4>
                 </div>
               </div>
@@ -1653,7 +1653,10 @@
       <div
         class="xs:gap-[30px] mx-auto flex max-w-[1140px] flex-col items-center gap-6 px-4 sm:gap-8 sm:px-6 md:gap-12 md:px-8 lg:gap-14 xl:px-0"
       >
-        <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
+        <a
+          href="/"
+          class="flex items-center gap-x-2 text-lg font-bold rtl:flex-row-reverse"
+        >
           <svg
             class="fill-primary fill-foreground h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
             xmlns="http://www.w3.org/2000/svg"
@@ -1666,24 +1669,24 @@
           <span
             class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
           >
-            PopStream
+            بوب ستريم
           </span>
         </a>
         <ul
-          class="xs:gap-[6px] dark:text-foreground text-foreground-inverse grid grid-cols-2 items-center justify-start gap-1 font-medium capitalize sm:gap-2 md:gap-4 md:gap-x-16 md:gap-y-4"
+          class="xs:gap-[6px] dark:text-foreground text-foreground-inverse grid grid-cols-2 items-center justify-start gap-1 font-medium capitalize sm:gap-2 md:gap-4 md:gap-x-16 md:gap-y-4 rtl:text-right"
         >
           <li class="text-center">
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
               href="/"
-              >Home</a
+              >الرئيسية</a
             >
           </li>
           <li class="text-center">
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
               href="/browse.html"
-              >Most Watched</a
+              >الأكثر مشاهدة</a
             >
           </li>
 
@@ -1691,7 +1694,7 @@
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
               href="/about.html"
-              >about us</a
+              >من نحن</a
             >
           </li>
 
@@ -1699,14 +1702,14 @@
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
               href="/browse.html"
-              >Recent Releases</a
+              >أحدث الإصدارات</a
             >
           </li>
           <li class="text-center">
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
               href="/contact.html"
-              >Contact</a
+              >تواصل معنا</a
             >
           </li>
 
@@ -1714,27 +1717,27 @@
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
               href="/browse.html"
-              >Top rated</a
+              >الأعلى تقييماً</a
             >
           </li>
           <li class="text-center">
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
               href="/privacy.html"
-              >Privacy policy</a
+              >سياسة الخصوصية</a
             >
           </li>
           <li class="text-center">
             <a
               class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
               href="/privacy.html"
-              >Terms and conditions
+              >الشروط والأحكام
             </a>
           </li>
         </ul>
       </div>
     </footer>
 
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="assets/js/main.ts"></script>
   </body>
 </html>

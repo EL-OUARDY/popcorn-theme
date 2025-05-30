@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PopStream</title>
-    <link rel="stylesheet" href="src/font-en.css" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="assets/css/font-en.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
   </head>
   <body class="bg-background selection:bg-primary/20 text-foreground font-sans">
@@ -291,51 +291,187 @@
       </div>
     </header>
 
-    <main
-      class="relative flex h-screen items-center justify-center"
-      style="
-        background-image:
-          linear-gradient(to right, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
-          url(&quot;/images/background.webp&quot;);
-        background-size: cover;
-        background-position: center center;
-      "
-    >
-      <div class="text-center">
-        <p class="text-primary text-base font-semibold">— 404 —</p>
-        <h1
-          class="mt-4 text-4xl font-black tracking-tight text-balance text-white sm:text-7xl"
+    <main class="pb-8 lg:pb-14 rtl:text-right">
+      <!-- Title -->
+      <div
+        class="relative min-h-[96px] sm:min-h-[114px] md:min-h-[132px] lg:min-h-[140px]"
+        style="
+          background-image:
+            linear-gradient(
+              to right,
+              rgba(0, 0, 0, 0.075),
+              rgba(0, 0, 0, 0.075)
+            ),
+            url(&quot;/images/background.webp&quot;);
+          background-size: cover;
+          background-position: center center;
+        "
+      >
+        <h2
+          class="xs:top-[60%] absolute top-[57.75%] left-1/2 w-full -translate-x-1/2 text-center text-base font-semibold text-white capitalize sm:top-[65%] sm:text-xl md:top-[70%] md:text-2xl"
         >
-          Page not found
-        </h1>
-        <p
-          class="mt-6 text-lg font-medium text-pretty text-white/60 sm:text-xl/8"
-        >
-          Sorry, we couldn’t find the page you’re looking for.
-        </p>
-        <div
-          class="mt-10 flex items-center justify-center gap-x-6 rtl:flex-row-reverse"
-        >
-          <a
-            href="/"
-            name="home"
-            class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium text-white transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
-          >
-            Go back home
-          </a>
-
-          <a
-            href="/browse.html"
-            class="flex gap-1 text-sm font-semibold text-white rtl:flex-row-reverse"
-          >
-            <span>Browse Movies</span>
-            <span class="block rtl:hidden" aria-hidden="true">&rarr;</span>
-            <span class="hidden rtl:block" aria-hidden="true">&larr;</span>
-          </a>
-        </div>
+          Privacy policy
+        </h2>
       </div>
+
+      <section class="mx-auto max-w-[940px] px-4 sm:px-6 md:px-8 xl:px-0">
+        <div class="mt-8 grid gap-8 md:mt-12 md:gap-12 lg:mt-16">
+          <div>
+            <h3 class="mb-4 text-xl font-semibold md:text-2xl">
+              1. Information We Collect
+            </h3>
+            <p class="text-foreground text-sm leading-relaxed md:text-base">
+              We collect information you provide directly to us, including name,
+              email, and viewing preferences. We also automatically collect
+              usage data and device information when you use our service.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mb-4 text-xl font-semibold md:text-2xl">
+              2. How We Use Your Information
+            </h3>
+            <p class="text-foreground text-sm leading-relaxed md:text-base">
+              Your information helps us provide, improve and personalize our
+              services, send you updates and recommendations, and ensure
+              platform security.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mb-4 text-xl font-semibold md:text-2xl">
+              3. Information Sharing
+            </h3>
+            <p class="text-foreground text-sm leading-relaxed md:text-base">
+              We don't sell your personal information. We may share data with
+              service providers who assist our operations, always under strict
+              confidentiality agreements.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mb-4 text-xl font-semibold md:text-2xl">
+              4. Data Security
+            </h3>
+            <p class="text-foreground text-sm leading-relaxed md:text-base">
+              We implement appropriate technical and organizational measures to
+              protect your personal information against unauthorized access or
+              disclosure.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="mb-4 text-xl font-semibold md:text-2xl">
+              5. Your Rights
+            </h3>
+            <p class="text-foreground text-sm leading-relaxed md:text-base">
+              You can access, update, or remove your personal data at any time.
+              Please
+              <a href="/contact.html" class="text-primary hover:underline"
+                >contact us</a
+              >
+              to manage your information.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script type="module" src="/src/main.ts"></script>
+    <footer
+      class="xs:py-8 dark:bg-foreground w-full py-[30px] sm:py-10 lg:py-16"
+      style="
+        background-image:
+          linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
+          url(&quot;/images/background.webp&quot;);
+        background-position: center center;
+        background-size: cover;
+      "
+    >
+      <div
+        class="xs:gap-[30px] mx-auto flex max-w-[1140px] flex-col items-center gap-6 px-4 sm:gap-8 sm:px-6 md:gap-12 md:px-8 lg:gap-14 xl:px-0"
+      >
+        <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
+          <svg
+            class="fill-primary fill-foreground h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+            ></path>
+          </svg>
+          <span
+            class="text-[16.75px] font-semibold tracking-wide text-white sm:text-[18px]"
+          >
+            PopStream
+          </span>
+        </a>
+        <ul
+          class="xs:gap-[6px] dark:text-foreground text-foreground-inverse grid grid-cols-2 items-center justify-start gap-1 font-medium capitalize sm:gap-2 md:gap-4 md:gap-x-16 md:gap-y-4"
+        >
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/"
+              >Home</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >Most Watched</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/about.html"
+              >about us</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >Recent releases</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/contact.html"
+              >Contact</a
+            >
+          </li>
+
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/browse.html"
+              >Top rated</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/privacy.html"
+              >Privacy policy</a
+            >
+          </li>
+          <li class="text-center">
+            <a
+              class="hover:text-primary xs:text-[12.75px] text-[12px] transition-all duration-300 hover:underline sm:text-[14.75px] md:text-[15.25px]"
+              href="/privacy.html"
+              >Terms and conditions
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/main.ts"></script>
   </body>
 </html>
