@@ -93,8 +93,12 @@ a {
     height: 2.75px;
     background-color: var(--color-primary);
     bottom: -4px;
-
     border-radius: 20px;
+}
+
+.rtl .nav-link::after,
+.rtl .line {
+    right: 0 !important;
 }
 
 .nav-link::after {
@@ -213,6 +217,11 @@ a {
     background: var(--color-primary) !important;
 }
 
+/* Swiper on RTL */
+.rtl .swiper {
+    direction: rtl !important;
+}
+
 
 /* Expandable text - Show more */
 .show-more-checkbox {
@@ -245,4 +254,9 @@ a {
 
 .show-more-checkbox:checked~.show-more-btn::after {
     content: " less";
+}
+
+/* footer */
+.rtl footer ul {
+    direction: rtl;
 }
