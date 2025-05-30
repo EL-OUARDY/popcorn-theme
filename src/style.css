@@ -256,7 +256,8 @@ a {
     content: " less";
 }
 
-/* footer */
-.rtl footer ul {
-    direction: rtl;
+/* RTL direction */
+.rtl footer ul,
+.rtl .movies-grid {
+    direction: rtl !important;
 }

@@ -12,10 +12,13 @@
       class="header-bg-transparent fixed top-0 left-0 z-101 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
     >
       <nav
-        class="desktop mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
+        class="desktop mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0 rtl:flex-row-reverse"
       >
         <!-- Logo -->
-        <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
+        <a
+          href="/"
+          class="flex items-center gap-x-2 text-lg font-bold rtl:flex-row-reverse"
+        >
           <svg
             class="fill-primary h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
             xmlns="http://www.w3.org/2000/svg"
@@ -32,10 +35,12 @@
           </span>
         </a>
 
-        <div class="flex flex-row items-center gap-4 md:gap-8">
+        <div
+          class="flex flex-row items-center gap-4 md:gap-8 rtl:flex-row-reverse"
+        >
           <!-- Links menu -->
           <ul
-            class="desktop hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex"
+            class="desktop hidden flex-row items-center gap-8 text-[14.75px] font-medium capitalize md:flex rtl:flex-row-reverse"
           >
             <li>
               <a href="/" class="nav-link active">Home</a>
@@ -52,11 +57,11 @@
                   <input
                     type="text"
                     name="q"
-                    class="header-bg dark:text-foreground w-full rounded-full px-4 py-1 pr-8 shadow placeholder:italic"
+                    class="header-bg dark:text-foreground w-full rounded-full px-4 py-1 pr-8 shadow placeholder:italic rtl:pr-4 rtl:pl-8 rtl:text-right"
                     placeholder="Search"
                   />
                   <button
-                    class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current"
+                    class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current rtl:left-3"
                     type="submit"
                   >
                     <svg
@@ -165,10 +170,13 @@
             class="header-bg-transparent fixed top-0 left-0 z-10 w-full py-[14.5px] transition-all duration-50 md:py-[16px]"
           >
             <nav
-              class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0"
+              class="mx-auto flex max-w-[1140px] flex-row items-center justify-between px-4 sm:px-6 md:px-8 xl:px-0 rtl:flex-row-reverse"
             >
               <!-- Logo -->
-              <a href="/" class="flex items-center gap-x-2 text-lg font-bold">
+              <a
+                href="/"
+                class="flex items-center gap-x-2 text-lg font-bold rtl:flex-row-reverse"
+              >
                 <svg
                   class="fill-primary h-[24px] w-[24px] sm:h-[28px] sm:w-[28px]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -221,16 +229,16 @@
             >
               <li>
                 <form
-                  class="flex flex-row items-center justify-center pt-6 text-[14px] sm:pt-8 sm:pb-10 md:pt-9 md:pb-10 lg:py-10"
+                  class="flex flex-row items-center justify-center pt-6 text-[14px] sm:pt-8 sm:pb-10 md:pt-9 md:pb-10 lg:py-10 rtl:flex-row-reverse"
                 >
                   <input
                     type="text"
-                    class="dark:text-foreground text-foreground-inverse w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px]"
-                    placeholder="Search "
+                    class="dark:text-foreground text-foreground-inverse w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px] rtl:pr-[20px] rtl:pl-[36px] rtl:text-right"
+                    placeholder="Search"
                     name="search"
                   /><button
                     type="submit"
-                    class="text-primary z-[1] -ml-[32px] text-[18px]"
+                    class="text-primary z-[1] -ml-[32px] text-[18px] rtl:-mr-[32px] rtl:ml-0"
                   >
                     <svg
                       stroke="currentColor"
@@ -282,7 +290,7 @@
       </div>
     </header>
 
-    <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14">
+    <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14 rtl:text-right">
       <!-- Hero section -->
       <section
         class="dark:text-foreground text-foreground-inverse w-full"
@@ -301,7 +309,7 @@
         "
       >
         <div
-          class="xs:py-28 xs:pb-12 mx-auto flex max-w-[1140px] flex-row justify-center gap-8 px-4 pt-24 pb-8 sm:px-6 sm:py-[136px] sm:pb-28 md:gap-10 md:px-8 lg:gap-12 lg:py-36 xl:px-0"
+          class="xs:py-28 xs:pb-12 mx-auto flex max-w-[1140px] flex-row justify-center gap-8 px-4 pt-24 pb-8 sm:px-6 sm:py-[136px] sm:pb-28 md:gap-10 md:px-8 lg:gap-12 lg:py-36 xl:px-0 rtl:flex-row-reverse"
         >
           <div class="hidden md:block">
             <div class="h-[380px] w-[254px]">
@@ -315,15 +323,15 @@
             </div>
           </div>
           <div
-            class="font-nunito xs:gap-[14px] mb-8 flex max-w-[90vw] flex-1 flex-col gap-3 will-change-transform motion-reduce:transform-none sm:max-w-[80vw] sm:gap-4 md:max-w-[520px] lg:gap-5"
+            class="xs:gap-[14px] mb-8 flex max-w-[90vw] flex-1 flex-col gap-3 will-change-transform motion-reduce:transform-none sm:max-w-[80vw] sm:gap-4 md:max-w-[520px] lg:gap-5"
           >
             <h2
-              class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold will-change-transform motion-reduce:transform-none sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] md:max-w-[420px]"
+              class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold will-change-transform motion-reduce:transform-none sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] md:max-w-[420px] rtl:self-end"
             >
               Severance (2022)
             </h2>
             <ul
-              class="xs:gap-3 flex flex-row flex-wrap items-center gap-[6px] will-change-transform motion-reduce:transform-none sm:gap-[14px]"
+              class="xs:gap-3 flex flex-row flex-wrap items-center gap-[6px] will-change-transform motion-reduce:transform-none sm:gap-[14px] rtl:flex-row-reverse rtl:self-end"
             >
               <span
                 class="genre xs:text-[11.75px] rounded-full px-[10px] py-[2.75px] text-[10.75px] sm:px-3 sm:py-1 sm:text-[12px] md:text-[12.75px]"
@@ -362,7 +370,7 @@
                 >show</label
               >
             </div>
-            <div class="flex flex-row items-center gap-4">
+            <div class="flex flex-row items-center gap-4 rtl:flex-row-reverse">
               <a
                 href="#trailer"
                 name="watch-trailer"
@@ -389,10 +397,11 @@
           class="xs:gap-1 mx-auto flex w-[90%] flex-col gap-[2px] sm:w-[80%] sm:gap-[6px] md:gap-2"
         >
           <h2
-            class="font-nunito xs:text-[18px] text-foreground mb-1 text-[16.75px] font-semibold sm:text-[18.75px] md:text-[22.75px] lg:text-[24px]"
+            class="xs:text-[18px] text-foreground mb-1 text-[16.75px] font-semibold sm:text-[18.75px] md:text-[22.75px] lg:text-[24px]"
           >
             Season 1 Recap
           </h2>
+
           <p class="mx-auto">
             At Lumon Industries, employees undergo a surgical procedure called
             "severance" that creates two separate identities: work-selves who
@@ -414,8 +423,9 @@
             war between the company and the awakening consciousness of its
             severed workers.
           </p>
+
           <ul
-            class="tags xs:gap-3 mt-4 flex flex-row flex-wrap items-center gap-[6px] will-change-transform motion-reduce:transform-none sm:gap-[14px]"
+            class="tags xs:gap-3 mt-4 flex flex-row flex-wrap items-center gap-[6px] will-change-transform motion-reduce:transform-none sm:gap-[14px] rtl:flex-row-reverse"
           >
             <span
               class="cursor rounded-full border px-[10px] py-[2.75px] text-xs sm:px-3 sm:py-1"
@@ -491,7 +501,7 @@
           class="xs:gap-1 mx-auto flex w-[90%] flex-col gap-[2px] sm:w-[80%] sm:gap-[6px] md:gap-2"
         >
           <h2
-            class="font-nunito xs:text-[18px] text-foreground mb-1 text-[16.75px] font-semibold sm:text-[18.75px] md:text-[22.75px] lg:text-[24px]"
+            class="xs:text-[18px] text-foreground mb-1 text-[16.75px] font-semibold sm:text-[18.75px] md:text-[22.75px] lg:text-[24px]"
           >
             Watch Trailer
           </h2>
@@ -514,7 +524,9 @@
       <section
         class="xs:py-[18.75px] mx-auto max-w-[1140px] px-4 py-[16.75px] sm:px-6 sm:py-[20px] md:px-8 xl:px-0"
       >
-        <div class="mb-[22.75px] flex flex-row items-center justify-between">
+        <div
+          class="mb-[22.75px] flex flex-row items-center justify-between rtl:flex-row-reverse"
+        >
           <div class="relative">
             <h3
               class="xs:text-[20px] text-[18.75px] font-semibold sm:text-[22.25px] sm:font-bold"
@@ -529,6 +541,7 @@
             >View all</a
           >
         </div>
+
         <div class="xs:h-[309px] h-[266px] sm:h-[312px]">
           <div class="swiper">
             <div class="swiper-wrapper">
