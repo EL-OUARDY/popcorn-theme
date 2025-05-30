@@ -3,6 +3,7 @@
 @import "swiper/swiper-bundle.css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant rtl (&:is(.rtl *));
 
 @layer base {
     :root {
