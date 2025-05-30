@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // Change header background on initial page load
+  handleHeaderBackgroundChange();
   // Header background change on scroll
   window.addEventListener("scroll", handleHeaderBackgroundChange);
 });
