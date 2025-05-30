@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @import "swiper/swiper-bundle.css";
 
@@ -37,9 +36,6 @@
     /* Shadows */
     --shadow-glow: 0 0 18px color-mix(in srgb, var(--color-primary) 70%, transparent);
     --shadow-glow-light: 0 0 24px color-mix(in srgb, var(--color-primary) 50%, transparent);
-
-    /* Fonts */
-    --font-sans: "Nunito", sans-serif;
 }
 
 
