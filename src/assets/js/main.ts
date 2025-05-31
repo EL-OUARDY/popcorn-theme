@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeBtn = document.querySelector("#theme-switcher");
   themeBtn?.addEventListener("click", () => changeTheme());
 
-  // mobile toggle click
+  // mobile menu toggle click
   const menuBtns = document.querySelectorAll(
     "#show-mobile-header-menu, #close-mobile-header-menu",
   );
@@ -45,6 +45,22 @@ document.addEventListener("DOMContentLoaded", () => {
   handleHeaderBackgroundChange();
   // Header background change on scroll
   window.addEventListener("scroll", handleHeaderBackgroundChange);
+
+  // Nicely load images with a fade effect
+  const imgs: NodeListOf<HTMLImageElement> =
+    document.querySelectorAll("img.lazy-fade");
+
+  imgs.forEach((img) => {
+    // If the image was pulled from cache it may already be complete.
+    if (img.complete) {
+      img.classList.add("is-loaded");
+    } else {
+      // Wait for it to finish.
+      img.addEventListener("load", () => img.classList.add("is-loaded"));
+      // Still reveal on error so the space isn’t blank forever.
+      img.addEventListener("error", () => img.classList.add("is-loaded"));
+    }
+  });
 });
 
 function changeTheme(theme: string | null = null) {

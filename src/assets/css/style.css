@@ -242,6 +242,16 @@ a {
     content: " less";
 }
 
+/* Fade animation for lazy-loaded images */
+img.lazy-fade {
+    opacity: 0 !important;
+    transition: opacity 400ms ease;
+}
+
+img.lazy-fade.is-loaded {
+    opacity: 1 !important;
+}
+
 /* RTL direction */
 .rtl,
 .rtl .swiper,
