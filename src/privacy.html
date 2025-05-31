@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="assets/css/font-en.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <script>
+      // Load default theme from local storage
+      (function () {
+        const localTheme = localStorage.getItem("APP_THEME");
+        const isSystemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = localTheme || (isSystemDark ? "dark" : "light");
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
   </head>
   <body class="bg-background selection:bg-primary/20 text-foreground font-sans">
     <header
@@ -281,7 +292,7 @@
     <main class="pb-8 lg:pb-14 rtl:text-right">
       <!-- Title -->
       <div
-        class="lazy-bg relative min-h-[96px] bg-cover bg-[position:center_center] sm:min-h-[114px] md:min-h-[132px] lg:min-h-[140px]"
+        class="lazy-bg dark:bg-background bg-foreground/90 relative min-h-[96px] bg-cover bg-[position:center_center] sm:min-h-[114px] md:min-h-[132px] lg:min-h-[140px]"
         data-bg="/images/background.webp"
         data-gradient="linear-gradient(
               to right,

@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="assets/css/font-en.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <script>
+      // Load default theme from local storage
+      (function () {
+        const localTheme = localStorage.getItem("APP_THEME");
+        const isSystemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = localTheme || (isSystemDark ? "dark" : "light");
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
   </head>
   <body class="bg-background selection:bg-primary/20 text-foreground font-sans">
     <header
@@ -281,7 +292,7 @@
     <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14 rtl:text-right">
       <!-- Hero section -->
       <section
-        class="dark:text-foreground text-foreground-inverse lazy-bg w-full bg-cover bg-[position:center_top]"
+        class="dark:text-foreground dark:bg-background bg-foreground/90 text-foreground-inverse lazy-bg w-full bg-cover bg-[position:center_top]"
         data-bg="/images/1-wide.webp"
         data-gradient="linear-gradient(
               to top,
@@ -295,7 +306,9 @@
           class="xs:py-28 xs:pb-12 mx-auto flex max-w-[1140px] flex-row justify-center gap-8 px-4 pt-24 pb-8 sm:px-6 sm:py-[136px] sm:pb-28 md:gap-10 md:px-8 lg:gap-12 lg:py-36 xl:px-0"
         >
           <div class="hidden md:block">
-            <div class="h-[380px] w-[254px]">
+            <div
+              class="h-[380px] w-[254px] transition-all duration-300 ease-in-out hover:scale-105"
+            >
               <img
                 loading="lazy"
                 src="/images/1.webp"

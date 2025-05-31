@@ -38,6 +38,17 @@
     --shadow-glow-light: 0 0 24px color-mix(in srgb, var(--color-primary) 50%, transparent);
 }
 
+html {
+    /* Add this to your existing CSS */
+    opacity: 0;
+}
+
+html.light,
+html.dark {
+    opacity: 1;
+    transition: opacity 200ms ease;
+}
+
 
 html,
 body {

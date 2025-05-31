@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="assets/css/font-ar.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <script>
+      // Load default theme from local storage
+      (function () {
+        const localTheme = localStorage.getItem("APP_THEME");
+        const isSystemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        const theme = localTheme || (isSystemDark ? "dark" : "light");
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
   </head>
   <body class="bg-background selection:bg-primary/20 text-foreground font-sans">
     <header
@@ -285,7 +296,7 @@
     <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14">
       <!-- Hero section -->
       <div
-        class="hero-swiper xs:h-[520px] h-[460px] w-full overflow-hidden sm:h-[640px] lg:h-screen"
+        class="hero-swiper dark:bg-background bg-foreground/90 xs:h-[520px] h-[460px] w-full overflow-hidden sm:h-[640px] lg:h-screen"
       >
         <div class="swiper-pagination hidden lg:block"></div>
 
@@ -334,7 +345,9 @@
                 </div>
               </div>
               <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
-                <div class="h-[380px] w-[254px]">
+                <div
+                  class="h-[380px] w-[254px] transition-all duration-300 ease-in-out hover:scale-105"
+                >
                   <img
                     loading="lazy"
                     src="/images/3.webp"
@@ -390,7 +403,9 @@
                 </div>
               </div>
               <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
-                <div class="h-[380px] w-[254px]">
+                <div
+                  class="h-[380px] w-[254px] transition-all duration-300 ease-in-out hover:scale-105"
+                >
                   <img
                     loading="lazy"
                     src="/images/1.webp"
@@ -449,7 +464,9 @@
                 </div>
               </div>
               <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
-                <div class="h-[380px] w-[254px]">
+                <div
+                  class="h-[380px] w-[254px] transition-all duration-300 ease-in-out hover:scale-105"
+                >
                   <img
                     loading="lazy"
                     src="/images/2.webp"
@@ -505,7 +522,9 @@
                 </div>
               </div>
               <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
-                <div class="h-[380px] w-[254px]">
+                <div
+                  class="h-[380px] w-[254px] transition-all duration-300 ease-in-out hover:scale-105"
+                >
                   <img
                     loading="lazy"
                     src="/images/4.webp"
