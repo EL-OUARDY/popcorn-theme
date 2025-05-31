@@ -154,14 +154,9 @@
       </nav>
       <!-- Mobile menu -->
       <div
-        class="mobile-menu bg-background dark:bg-foreground fixed inset-0 z-100 hidden h-screen w-full"
-        style="
-          background-image:
-            linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
-            url(&quot;/images/background.webp&quot;);
-          background-position: center center;
-          background-size: cover;
-        "
+        class="mobile-menu bg-background dark:bg-foreground lazy-bg fixed inset-0 z-100 hidden h-screen w-full bg-cover bg-[position:center_center]"
+        data-bg="/images/background.webp"
+        data-gradient="linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075))"
       >
         <div class="flex h-full flex-col">
           <div
@@ -296,15 +291,9 @@
 
         <div class="swiper-wrapper">
           <div
-            class="swiper-slide !size-full will-change-transform motion-reduce:transform-none"
-            style="
-              background-image:
-                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-                url(&quot;/images/3-wide.webp&quot;);
-              background-position: center center;
-              background-size: cover;
-              width: 1041px;
-            "
+            class="swiper-slide lazy-bg !size-full w-[1041px] bg-cover bg-[position:center_center] will-change-transform motion-reduce:transform-none"
+            data-bg="/images/3-wide.webp"
+            data-gradient="linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5))"
           >
             <div
               class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
@@ -360,15 +349,9 @@
           </div>
 
           <div
-            class="swiper-slide !size-full will-change-transform motion-reduce:transform-none"
-            style="
-              background-image:
-                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-                url(&quot;/images/1-wide.webp&quot;);
-              background-position: center center;
-              background-size: cover;
-              width: 1041px;
-            "
+            class="swiper-slide lazy-bg !size-full w-[1041px] bg-cover bg-[position:center_center] will-change-transform motion-reduce:transform-none"
+            data-bg="/images/1-wide.webp"
+            data-gradient="linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5))"
           >
             <div
               class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
@@ -422,15 +405,9 @@
           </div>
 
           <div
-            class="swiper-slide !size-full will-change-transform motion-reduce:transform-none"
-            style="
-              background-image:
-                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-                url(&quot;/images/2-wide.webp&quot;);
-              background-position: center center;
-              background-size: cover;
-              width: 1041px;
-            "
+            class="swiper-slide lazy-bg !size-full w-[1041px] bg-cover bg-[position:center_center] will-change-transform motion-reduce:transform-none"
+            data-bg="/images/2-wide.webp"
+            data-gradient="linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5))"
           >
             <div
               class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
@@ -487,15 +464,9 @@
           </div>
 
           <div
-            class="swiper-slide !size-full will-change-transform motion-reduce:transform-none"
-            style="
-              background-image:
-                linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-                url(&quot;/images/4-wide.webp&quot;);
-              background-position: center center;
-              background-size: cover;
-              width: 1041px;
-            "
+            class="swiper-slide lazy-bg !size-full w-[1041px] bg-cover bg-[position:center_center] will-change-transform motion-reduce:transform-none"
+            data-bg="/images/4-wide.webp"
+            data-gradient="linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5))"
           >
             <div
               class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
@@ -1656,14 +1627,9 @@
     </main>
 
     <footer
-      class="xs:py-8 dark:bg-foreground w-full py-[30px] sm:py-10 lg:py-16"
-      style="
-        background-image:
-          linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
-          url(&quot;/images/background.webp&quot;);
-        background-position: center center;
-        background-size: cover;
-      "
+      class="xs:py-8 dark:bg-foreground lazy-bg w-full bg-cover bg-[position:center_center] py-[30px] sm:py-10 lg:py-16"
+      data-bg="/images/background.webp"
+      data-gradient="linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075))"
     >
       <div
         class="xs:gap-[30px] mx-auto flex max-w-[1140px] flex-col items-center gap-6 px-4 sm:gap-8 sm:px-6 md:gap-12 md:px-8 lg:gap-14 xl:px-0"

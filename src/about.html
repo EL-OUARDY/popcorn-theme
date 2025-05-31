@@ -152,14 +152,9 @@
       </nav>
       <!-- Mobile menu -->
       <div
-        class="mobile-menu bg-background dark:bg-foreground fixed inset-0 z-100 hidden h-screen w-full"
-        style="
-          background-image:
-            linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
-            url(&quot;/images/background.webp&quot;);
-          background-position: center center;
-          background-size: cover;
-        "
+        class="mobile-menu bg-background dark:bg-foreground lazy-bg fixed inset-0 z-100 hidden h-screen w-full bg-cover bg-[position:center_center]"
+        data-bg="/images/background.webp"
+        data-gradient="linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075))"
       >
         <div class="flex h-full flex-col">
           <div
@@ -286,18 +281,13 @@
     <main class="pb-8 lg:pb-14 rtl:text-right">
       <!-- Title -->
       <div
-        class="relative min-h-[96px] sm:min-h-[114px] md:min-h-[132px] lg:min-h-[140px]"
-        style="
-          background-image:
-            linear-gradient(
+        class="lazy-bg relative min-h-[96px] bg-cover bg-[position:center_center] sm:min-h-[114px] md:min-h-[132px] lg:min-h-[140px]"
+        data-bg="/images/background.webp"
+        data-gradient="linear-gradient(
               to right,
               rgba(0, 0, 0, 0.075),
               rgba(0, 0, 0, 0.075)
-            ),
-            url(&quot;/images/background.webp&quot;);
-          background-size: cover;
-          background-position: center center;
-        "
+            )"
       >
         <h2
           class="xs:top-[60%] absolute top-[57.75%] left-1/2 w-full -translate-x-1/2 text-center text-base font-semibold text-white capitalize sm:top-[65%] sm:text-xl md:top-[70%] md:text-2xl"
@@ -362,14 +352,9 @@
     </main>
 
     <footer
-      class="xs:py-8 dark:bg-foreground w-full py-[30px] sm:py-10 lg:py-16"
-      style="
-        background-image:
-          linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
-          url(&quot;/images/background.webp&quot;);
-        background-position: center center;
-        background-size: cover;
-      "
+      class="xs:py-8 dark:bg-foreground lazy-bg w-full bg-cover bg-[position:center_center] py-[30px] sm:py-10 lg:py-16"
+      data-bg="/images/background.webp"
+      data-gradient="linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075))"
     >
       <div
         class="xs:gap-[30px] mx-auto flex max-w-[1140px] flex-col items-center gap-6 px-4 sm:gap-8 sm:px-6 md:gap-12 md:px-8 lg:gap-14 xl:px-0"

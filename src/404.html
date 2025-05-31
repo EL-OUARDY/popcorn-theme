@@ -152,14 +152,9 @@
       </nav>
       <!-- Mobile menu -->
       <div
-        class="mobile-menu bg-background dark:bg-foreground fixed inset-0 z-100 hidden h-screen w-full"
-        style="
-          background-image:
-            linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
-            url(&quot;/images/background.webp&quot;);
-          background-position: center center;
-          background-size: cover;
-        "
+        class="mobile-menu bg-background dark:bg-foreground lazy-bg fixed inset-0 z-100 hidden h-screen w-full bg-cover bg-[position:center_center]"
+        data-bg="/images/background.webp"
+        data-gradient="linear-gradient(rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075))"
       >
         <div class="flex h-full flex-col">
           <div
@@ -284,14 +279,9 @@
     </header>
 
     <main
-      class="relative flex h-screen items-center justify-center"
-      style="
-        background-image:
-          linear-gradient(to right, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075)),
-          url(&quot;/images/background.webp&quot;);
-        background-size: cover;
-        background-position: center center;
-      "
+      class="lazy-bg relative flex h-screen items-center justify-center bg-cover bg-[position:center_center]"
+      data-bg="/images/background.webp"
+      data-gradient="linear-gradient(to right, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.075))"
     >
       <div class="text-center">
         <p class="text-primary text-base font-semibold">— 404 —</p>
