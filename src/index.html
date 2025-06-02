@@ -3,10 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PopStream</title>
+
+    <!-- Primary Meta Tags -->
+    <title>PopStream - Watch Movies & TV Shows Online</title>
+    <meta name="title" content="PopStream - Watch Movies & TV Shows Online" />
+    <meta
+      name="description"
+      content="Stream the latest movies and TV shows on PopStream. Watch popular titles like Severance, Andor, Snow White and more in HD quality. Start your entertainment journey today!"
+    />
+    <meta
+      name="keywords"
+      content="movie streaming, tv shows, online movies, watch movies online, PopStream, entertainment, streaming platform"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="PopStream" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://popstream.com/" />
+    <meta
+      property="og:title"
+      content="PopStream - Watch Movies & TV Shows Online"
+    />
+    <meta
+      property="og:description"
+      content="Stream the latest movies and TV shows on PopStream. Watch popular titles like Severance, Andor, Snow White and more in HD quality. Start your entertainment journey today!"
+    />
+    <meta
+      property="og:image"
+      content="https://popstream.com/images/og-image.jpg"
+    />
+    <meta property="og:site_name" content="PopStream" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://popstream.com/" />
+    <meta
+      property="twitter:title"
+      content="PopStream - Watch Movies & TV Shows Online"
+    />
+    <meta
+      property="twitter:description"
+      content="Stream the latest movies and TV shows on PopStream. Watch popular titles like Severance, Andor, Snow White and more in HD quality. Start your entertainment journey today!"
+    />
+    <meta
+      property="twitter:image"
+      content="https://popstream.com/images/twitter-image.jpg"
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://popstream.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/font-en.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PopStream",
+        "url": "https://popstream.com",
+        "description": "Stream the latest movies and TV shows on PopStream. Watch popular titles like Severance, Andor, Snow White and more in HD quality.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://popstream.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- Theme Script -->
     <script>
       // Load default theme from local storage
       (function () {
@@ -419,6 +495,65 @@
 
           <div
             class="swiper-slide lazy-bg !size-full w-[1041px] bg-cover bg-[position:center_center] will-change-transform motion-reduce:transform-none"
+            data-bg="/images/19-wide.webp"
+            data-gradient="linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5))"
+          >
+            <div
+              class="mx-auto flex h-full max-w-[1140px] flex-row items-center px-4 sm:gap-20 sm:px-6 md:px-8 lg:gap-32 xl:px-0"
+            >
+              <div
+                class="xs:gap-3 dark:text-foreground text-foreground-inverse flex max-w-[90vw] flex-col gap-[10px] sm:mb-8 sm:max-w-[80vw] sm:gap-5 md:max-w-[420px]"
+              >
+                <h2
+                  class="xs:text-3xl xs:leading-normal xs:max-w-[320px] !w-full max-w-[280px] text-[28.75px] leading-snug font-extrabold sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] rtl:self-end rtl:text-right"
+                >
+                  Andor (2022)
+                </h2>
+                <p
+                  class="xs:text-[15.75px] text-[14.25px] leading-relaxed sm:text-base rtl:text-right"
+                >
+                  In an era filled with danger, deception and intrigue, Cassian
+                  Andor will discover the difference he can make in the struggle
+                  against the tyrannical Galactic Empire. He embarks on a path
+                  that is destined to turn him into a rebel hero.
+                </p>
+                <div
+                  class="xs:mt-5 mt-[18px] flex flex-row items-center gap-4 sm:mt-6"
+                >
+                  <a
+                    href="/single.html#trailer"
+                    name="watch-trailer"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch trailer</a
+                  ><a
+                    href="/single.html"
+                    name="watch-now"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                  >
+                    Watch now
+                  </a>
+                </div>
+              </div>
+              <div class="mr-auto hidden md:block rtl:mr-0 rtl:ml-auto">
+                <div
+                  class="h-[380px] w-[254px] transition-all duration-300 ease-in-out hover:scale-105"
+                >
+                  <img
+                    loading="lazy"
+                    src="/images/19.webp"
+                    alt="A Working Man"
+                    height="380"
+                    width="254"
+                    class="lazy-fade rounded-xl object-cover shadow-lg transition-all duration-300 ease-in"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-slide lazy-bg !size-full w-[1041px] bg-cover bg-[position:center_center] will-change-transform motion-reduce:transform-none"
             data-bg="/images/2-wide.webp"
             data-gradient="linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5))"
           >
@@ -563,6 +698,47 @@
           <div class="xs:h-[309px] h-[266px] sm:h-[312px]">
             <div class="swiper">
               <div class="swiper-wrapper">
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      loading="lazy"
+                      src="/images/19.webp"
+                      alt="Andor (2022)"
+                      height="250"
+                      width="170"
+                      class="lazy-fade scale-100 rounded-lg object-cover shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    Andor (2022)
+                  </h4>
+                </div>
+
                 <div
                   class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
                 >
@@ -890,6 +1066,88 @@
                     Parasite
                   </h4>
                 </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      loading="lazy"
+                      src="/images/14.webp"
+                      alt="Schindler's List"
+                      height="250"
+                      width="170"
+                      class="lazy-fade scale-100 rounded-lg object-cover shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    Schindler's List
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      loading="lazy"
+                      src="/images/17.webp"
+                      alt="The Green Mile"
+                      height="250"
+                      width="170"
+                      class="lazy-fade scale-100 rounded-lg object-cover shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    The Green Mile
+                  </h4>
+                </div>
               </div>
               <!-- .swiper-wrapper -->
             </div>
@@ -1159,88 +1417,6 @@
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
                     The Green Mile
-                  </h4>
-                </div>
-
-                <div
-                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
-                >
-                  <a
-                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
-                    href="/single.html"
-                    ><img
-                      loading="lazy"
-                      src="/images/7.webp"
-                      alt="The Shawshank Redemption"
-                      height="250"
-                      width="170"
-                      class="lazy-fade scale-100 rounded-lg object-cover shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
-                    <div
-                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
-                    >
-                      <div
-                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
-                      >
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
-                          ></path>
-                        </svg>
-                      </div></div
-                  ></a>
-                  <h4
-                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
-                  >
-                    The Shawshank Redemption
-                  </h4>
-                </div>
-
-                <div
-                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
-                >
-                  <a
-                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
-                    href="/single.html"
-                    ><img
-                      loading="lazy"
-                      src="/images/9.webp"
-                      alt="Interstellar"
-                      height="250"
-                      width="170"
-                      class="lazy-fade scale-100 rounded-lg object-cover shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
-                    <div
-                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
-                    >
-                      <div
-                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
-                      >
-                        <svg
-                          stroke="currentColor"
-                          fill="currentColor"
-                          stroke-width="0"
-                          height="1em"
-                          width="1em"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
-                          ></path>
-                        </svg>
-                      </div></div
-                  ></a>
-                  <h4
-                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
-                  >
-                    Interstellar
                   </h4>
                 </div>
               </div>
