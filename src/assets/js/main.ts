@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Theme toggle click
@@ -23,13 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     slidesPerView: 1,
     autoplay: { delay: 10000, disableOnInteraction: false },
-    modules: [Autoplay, Pagination, Navigation],
+    modules: [Autoplay, Pagination],
     pagination: {
       el: ".swiper-pagination",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
     },
   });
 

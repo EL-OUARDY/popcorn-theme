@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://popstream.com/404" />
+    <meta property="og:url" content="https://example.com/404" />
     <meta property="og:title" content="Page Not Found - PopStream" />
     <meta
       property="og:description"
@@ -26,12 +26,12 @@
     />
     <meta
       property="og:image"
-      content="https://popstream.com/images/og-image.jpg"
+      content="https://example.com/images/og-image.jpg"
     />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://popstream.com/404" />
+    <meta property="twitter:url" content="https://example.com/404" />
     <meta property="twitter:title" content="Page Not Found - PopStream" />
     <meta
       property="twitter:description"
@@ -39,7 +39,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://popstream.com/images/og-image.jpg"
+      content="https://example.com/images/og-image.jpg"
     />
 
     <script>
@@ -105,6 +105,7 @@
                   <button
                     class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current rtl:right-auto rtl:left-3"
                     type="submit"
+                    aria-label="search"
                   >
                     <svg
                       stroke="currentColor"
@@ -131,6 +132,7 @@
               type="button"
               id="theme-switcher"
               class="flex cursor-pointer items-center justify-center transition-all duration-100 hover:scale-110"
+              aria-label="change theme"
             >
               <svg
                 class="sun dark:hidden"
@@ -179,6 +181,7 @@
             name="menu"
             class="inline-block cursor-pointer text-[22.75px] transition-all duration-300 md:hidden"
             id="show-mobile-header-menu"
+            aria-label="open menu"
           >
             <svg
               stroke="currentColor"
@@ -236,6 +239,7 @@
                   name="menu"
                   class="text-foreground-inverse dark:text-foreground inline-block cursor-pointer text-[22.75px] transition-all duration-300"
                   id="close-mobile-header-menu"
+                  aria-label="close menu"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -270,9 +274,11 @@
                     class="dark:text-foreground text-foreground-inverse w-[300px] rounded-full bg-[#302d3a] py-[8px] pr-[36px] pl-[20px] font-medium shadow-md transition-all duration-300 outline-none focus:bg-[#474550] focus:shadow-sm md:w-[340px] rtl:pr-[20px] rtl:pl-[36px] rtl:text-right"
                     placeholder="Search"
                     name="search"
-                  /><button
+                  />
+                  <button
                     type="submit"
                     class="text-primary z-[1] -ml-[32px] text-[18px] rtl:-mr-[32px] rtl:ml-0"
+                    aria-label="search"
                   >
                     <svg
                       stroke="currentColor"

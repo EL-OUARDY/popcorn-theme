@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,6 +70,7 @@
                   <button
                     class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current rtl:right-auto rtl:left-3"
                     type="submit"
+                    aria-label="search"
                   >
                     <svg
                       stroke="currentColor"
@@ -96,6 +97,7 @@
               type="button"
               id="theme-switcher"
               class="flex cursor-pointer items-center justify-center transition-all duration-100 hover:scale-110"
+              aria-label="change theme"
             >
               <svg
                 class="sun dark:hidden"
@@ -144,6 +146,7 @@
             name="menu"
             class="inline-block cursor-pointer text-[22.75px] transition-all duration-300 md:hidden"
             id="show-mobile-header-menu"
+            aria-label="open menu"
           >
             <svg
               stroke="currentColor"
@@ -201,6 +204,7 @@
                   name="menu"
                   class="text-foreground-inverse dark:text-foreground inline-block cursor-pointer text-[22.75px] transition-all duration-300"
                   id="close-mobile-header-menu"
+                  aria-label="close menu"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -238,6 +242,7 @@
                   /><button
                     type="submit"
                     class="text-primary z-[1] -ml-[32px] text-[18px] rtl:-mr-[32px] rtl:ml-0"
+                    aria-label="search"
                   >
                     <svg
                       stroke="currentColor"
@@ -317,9 +322,11 @@
             class="w-[300px] rounded-full py-[8px] pr-[36px] pl-[20px] font-medium text-[#666] shadow-md transition-all duration-300 outline-none focus:bg-white focus:shadow-sm md:w-[340px] rtl:pr-[20px] rtl:pl-[36px] rtl:text-right dark:bg-[#302d3a] dark:text-white dark:focus:bg-[#474550]"
             placeholder="Search here"
             name="search"
-          /><button
+          />
+          <button
             type="submit"
             class="text-primary z-[1] -ml-[32px] text-[18px] rtl:-mr-[32px] rtl:ml-0"
+            aria-label="search"
           >
             <svg
               stroke="currentColor"
@@ -347,6 +354,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -376,11 +384,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Severance
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -388,6 +396,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -417,11 +426,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Mission Impossible - The Final Reckoning
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -429,6 +438,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -458,11 +468,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               A Working Man
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -470,6 +480,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -499,11 +510,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               The Green Mile
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -511,6 +522,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -540,11 +552,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Game of Thrones
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -552,6 +564,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -581,11 +594,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               The Shawshank Redemption
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -593,6 +606,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -622,11 +636,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Parasite
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -634,6 +648,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -663,11 +678,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Snow White
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -675,6 +690,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -704,11 +720,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Arcane
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -716,6 +732,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -745,11 +762,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Interstellar
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -757,6 +774,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -786,11 +804,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Dark Knight
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -798,6 +816,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -827,11 +846,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Late Night
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -839,6 +858,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -868,11 +888,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Warfare
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -880,6 +900,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -909,11 +930,11 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Schindler's List
-            </h4>
+            </h3>
           </div>
 
           <div
@@ -921,6 +942,7 @@
           >
             <a
               class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+              aria-label="learn more"
               href="/single.html"
               ><img
                 loading="lazy"
@@ -950,17 +972,18 @@
                   </svg>
                 </div></div
             ></a>
-            <h4
+            <h3
               class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium sm:text-base"
             >
               Avatar: The Last Airbender
-            </h4>
+            </h3>
           </div>
         </div>
         <div class="flex w-full items-center justify-center">
           <button
             type="button"
             class="xs:py-[6px] xs:px-3 xs:text-[14px] bg-primary my-4 rounded-full px-[10.75px] py-1 text-[12.75px] font-medium text-gray-50 shadow-md transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-2 sm:text-[14.75px] md:text-[15.25px]"
+            aria-label="load more"
           >
             Load more
           </button>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +22,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://popstream.com/" />
+    <meta property="og:url" content="https://example.com/" />
     <meta
       property="og:title"
       content="PopStream - Watch Movies & TV Shows Online"
@@ -33,13 +33,13 @@
     />
     <meta
       property="og:image"
-      content="https://popstream.com/images/og-image.jpg"
+      content="https://example.com/images/og-image.jpg"
     />
     <meta property="og:site_name" content="PopStream" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://popstream.com/" />
+    <meta property="twitter:url" content="https://example.com/" />
     <meta
       property="twitter:title"
       content="PopStream - Watch Movies & TV Shows Online"
@@ -50,11 +50,11 @@
     />
     <meta
       property="twitter:image"
-      content="https://popstream.com/images/twitter-image.jpg"
+      content="https://example.com/images/twitter-image.jpg"
     />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://popstream.com/" />
+    <link rel="canonical" href="https://example.com/" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -72,11 +72,11 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "PopStream",
-        "url": "https://popstream.com",
+        "url": "https://example.com",
         "description": "Stream the latest movies and TV shows on PopStream. Watch popular titles like Severance, Andor, Snow White and more in HD quality.",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://popstream.com/search?q={search_term_string}",
+          "target": "https://example.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }
@@ -146,6 +146,7 @@
                   <button
                     class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current rtl:right-auto rtl:left-3"
                     type="submit"
+                    aria-label="search"
                   >
                     <svg
                       stroke="currentColor"
@@ -172,6 +173,7 @@
               type="button"
               id="theme-switcher"
               class="flex cursor-pointer items-center justify-center transition-all duration-100 hover:scale-110"
+              aria-label="change theme"
             >
               <svg
                 class="sun dark:hidden"
@@ -220,6 +222,7 @@
             name="menu"
             class="inline-block cursor-pointer text-[22.75px] transition-all duration-300 md:hidden"
             id="show-mobile-header-menu"
+            aria-label="open menu"
           >
             <svg
               stroke="currentColor"
@@ -277,6 +280,7 @@
                   name="menu"
                   class="text-foreground-inverse dark:text-foreground inline-block cursor-pointer text-[22.75px] transition-all duration-300"
                   id="close-mobile-header-menu"
+                  aria-label="close menu"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -314,6 +318,7 @@
                   /><button
                     type="submit"
                     class="text-primary z-[1] -ml-[32px] text-[18px] rtl:-mr-[32px] rtl:ml-0"
+                    aria-label="search"
                   >
                     <svg
                       stroke="currentColor"
@@ -411,7 +416,7 @@
                   ><a
                     href="/single.html"
                     name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium !text-white transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
                     Watch now
                   </a>
@@ -470,7 +475,7 @@
                   ><a
                     href="/single.html"
                     name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium !text-white transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
                     Watch now
                   </a>
@@ -529,7 +534,7 @@
                   ><a
                     href="/single.html"
                     name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium !text-white transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
                     Watch now
                   </a>
@@ -592,7 +597,7 @@
                   ><a
                     href="/single.html"
                     name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium !text-white transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
                     Watch now
                   </a>
@@ -650,7 +655,7 @@
                   ><a
                     href="/single.html"
                     name="watch-now"
-                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                    class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium !text-white transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
                   >
                     Watch now
                   </a>
@@ -1417,6 +1422,88 @@
                     class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
                   >
                     The Green Mile
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      loading="lazy"
+                      src="/images/19.webp"
+                      alt="Andor (2022)"
+                      height="250"
+                      width="170"
+                      class="lazy-fade scale-100 rounded-lg object-cover shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    Andor (2022)
+                  </h4>
+                </div>
+
+                <div
+                  class="swiper-slide xs:gap-[14px] mt-1 !flex max-w-[170px] flex-col gap-2 rounded-lg"
+                >
+                  <a
+                    class="group xs:h-[250px] bg-foreground-muted relative h-[216px] w-[170px] overflow-hidden rounded-lg select-none"
+                    href="/single.html"
+                    ><img
+                      loading="lazy"
+                      src="/images/13.webp"
+                      alt="Mission Impossible"
+                      height="250"
+                      width="170"
+                      class="lazy-fade scale-100 rounded-lg object-cover shadow-md drop-shadow-md transition-all duration-300 ease-in-out group-hover:shadow-none group-hover:drop-shadow-none" />
+                    <div
+                      class="absolute top-0 left-0 flex h-full w-[170px] items-center justify-center rounded-lg bg-[rgba(0,0,0,0.6)] opacity-0 transition-all duration-300 group-hover:opacity-100"
+                    >
+                      <div
+                        class="xs:text-[48px] text-primary scale-[0.4] text-[42px] transition-all duration-300 group-hover:scale-100"
+                      >
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M10 15.5v-7c0-.41.47-.65.8-.4l4.67 3.5c.27.2.27.6 0 .8l-4.67 3.5c-.33.25-.8.01-.8-.4Zm11.96-4.45c.58 6.26-4.64 11.48-10.9 10.9 -4.43-.41-8.12-3.85-8.9-8.23 -.26-1.42-.19-2.78.12-4.04 .14-.58.76-.9 1.31-.7v0c.47.17.75.67.63 1.16 -.2.82-.27 1.7-.19 2.61 .37 4.04 3.89 7.25 7.95 7.26 4.79.01 8.61-4.21 7.94-9.12 -.51-3.7-3.66-6.62-7.39-6.86 -.83-.06-1.63.02-2.38.2 -.49.11-.99-.16-1.16-.64v0c-.2-.56.12-1.17.69-1.31 1.79-.43 3.75-.41 5.78.37 3.56 1.35 6.15 4.62 6.5 8.4ZM5.5 4C4.67 4 4 4.67 4 5.5 4 6.33 4.67 7 5.5 7 6.33 7 7 6.33 7 5.5 7 4.67 6.33 4 5.5 4Z"
+                          ></path>
+                        </svg>
+                      </div></div
+                  ></a>
+                  <h4
+                    class="xs:text-[14.75px] dark:text-foreground cursor-default text-center text-[14px] font-medium capitalize sm:text-base"
+                  >
+                    Mission Impossible - The Final Reckoning
                   </h4>
                 </div>
               </div>

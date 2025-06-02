@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +20,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://popstream.com/contact.html" />
+    <meta property="og:url" content="https://example.com/contact.html" />
     <meta property="og:title" content="Contact Us | PopStream" />
     <meta
       property="og:description"
@@ -29,7 +29,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://popstream.com/contact.html" />
+    <meta name="twitter:url" content="https://example.com/contact.html" />
     <meta name="twitter:title" content="Contact Us | PopStream" />
     <meta
       name="twitter:description"
@@ -39,7 +39,7 @@
     <!-- Additional SEO Tags -->
     <meta name="robots" content="index, follow" />
     <meta name="author" content="PopStream" />
-    <link rel="canonical" href="https://popstream.com/contact.html" />
+    <link rel="canonical" href="https://example.com/contact.html" />
 
     <script>
       // Load default theme from local storage
@@ -104,6 +104,7 @@
                   <button
                     class="bg-header text-primary dark:text-primary absolute top-0 right-3 flex size-4 h-full items-center fill-current rtl:right-auto rtl:left-3"
                     type="submit"
+                    aria-label="search"
                   >
                     <svg
                       stroke="currentColor"
@@ -130,6 +131,7 @@
               type="button"
               id="theme-switcher"
               class="flex cursor-pointer items-center justify-center transition-all duration-100 hover:scale-110"
+              aria-label="change theme"
             >
               <svg
                 class="sun dark:hidden"
@@ -178,6 +180,7 @@
             name="menu"
             class="inline-block cursor-pointer text-[22.75px] transition-all duration-300 md:hidden"
             id="show-mobile-header-menu"
+            aria-label="open menu"
           >
             <svg
               stroke="currentColor"
@@ -235,6 +238,7 @@
                   name="menu"
                   class="text-foreground-inverse dark:text-foreground inline-block cursor-pointer text-[22.75px] transition-all duration-300"
                   id="close-mobile-header-menu"
+                  aria-label="close menu"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -272,6 +276,7 @@
                   /><button
                     type="submit"
                     class="text-primary z-[1] -ml-[32px] text-[18px] rtl:-mr-[32px] rtl:ml-0"
+                    aria-label="search"
                   >
                     <svg
                       stroke="currentColor"
@@ -355,37 +360,41 @@
               </p>
               <div class="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label class="text-sm font-medium">Name</label>
+                  <label for="name" class="text-sm font-medium">Name</label>
                   <input
                     type="text"
                     name="name"
+                    id="name"
                     class="border-foreground/20 mt-2 w-full rounded-md border bg-transparent p-2"
                     required
                   />
                 </div>
                 <div>
-                  <label class="text-sm font-medium">Email</label>
+                  <label for="email" class="text-sm font-medium">Email</label>
                   <input
                     type="email"
                     name="email"
+                    id="email"
                     class="border-foreground/20 mt-2 w-full rounded-md border bg-transparent p-2"
                     required
                   />
                 </div>
               </div>
               <div>
-                <label class="text-sm font-medium">Subject</label>
+                <label for="subject" class="text-sm font-medium">Subject</label>
                 <input
                   type="text"
                   name="subject"
+                  id="subject"
                   class="border-foreground/20 mt-2 w-full rounded-md border bg-transparent p-2"
                   required
                 />
               </div>
               <div>
-                <label class="text-sm font-medium">Message</label>
+                <label for="message" class="text-sm font-medium">Message</label>
                 <textarea
                   name="message"
+                  id="message"
                   rows="4"
                   class="border-foreground/20 mt-2 w-full rounded-md border bg-transparent p-2"
                   required
@@ -396,6 +405,7 @@
                 <button
                   type="submit"
                   class="xs:py-[6px] xs:px-3 xs:text-[14px] bg-primary my-4 rounded-full px-[10.75px] py-1 text-[12.75px] font-medium text-gray-50 shadow-md transition-all duration-300 hover:-translate-y-1 sm:px-4 sm:py-2 sm:text-[14.75px] md:text-[15.25px]"
+                  aria-label="send message"
                 >
                   Send Message
                 </button>
