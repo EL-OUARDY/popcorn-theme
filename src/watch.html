@@ -425,99 +425,161 @@
     </header>
 
     <main class="xs:pb-1 pb-0 sm:pb-2 md:pb-4 lg:pb-14 rtl:text-right">
-      <!-- Hero section -->
-      <section
-        class="dark:text-foreground dark:bg-background bg-foreground/90 text-foreground-inverse lazy-bg w-full bg-cover bg-[position:center_top]"
-        data-bg="/images/1-wide.webp"
+      <!-- Background -->
+      <div
+        class="lazy-bg dark:bg-background bg-foreground/90 relative h-[55px] bg-cover bg-[position:center_center] sm:h-[57px] md:h-[62px]"
+        data-bg="/images/background.webp"
         data-gradient="linear-gradient(
-              to top,
-              rgb(0, 0, 0),
-              rgba(0, 0, 0, 0.98),
-              rgba(0, 0, 0, 0.8),
-              rgba(0, 0, 0, 0.4)
+              to right,
+              rgba(0, 0, 0, 0.075),
+              rgba(0, 0, 0, 0.075)
             )"
-      >
+      ></div>
+
+      <!-- Player section -->
+      <section class="mx-auto max-w-5xl lg:mt-4">
         <div
-          class="xs:py-28 xs:pb-12 mx-auto flex max-w-[1140px] flex-row justify-center gap-8 px-4 pt-24 pb-8 sm:px-6 sm:py-[136px] sm:pb-28 md:gap-10 md:px-8 lg:gap-12 lg:py-36 xl:px-0"
+          class="flex aspect-video w-full items-center justify-center !bg-black"
         >
-          <div class="hidden md:block">
-            <div
-              class="h-[380px] w-[254px] transition-all duration-300 ease-in-out hover:scale-105"
-            >
-              <img
-                loading="lazy"
-                src="/images/1.webp"
-                alt="A Working Man"
-                height="380"
-                width="254"
-                class="lazy-fade rounded-xl object-cover shadow-lg transition-all duration-300 ease-in"
-              />
-            </div>
-          </div>
-          <div
-            class="xs:gap-[14px] mb-8 flex max-w-[90vw] flex-1 flex-col gap-3 will-change-transform motion-reduce:transform-none sm:max-w-[80vw] sm:gap-4 md:max-w-[520px] lg:gap-5"
+          <img src="assets/loader.svg" class="size-15" alt="loading..." />
+        </div>
+        <!-- Meta -->
+        <div class="mt-4 flex flex-col gap-2 px-4 capitalize lg:px-0">
+          <h1
+            class="text-base text-[16.75px] font-semibold capitalize sm:text-xl sm:text-[18.75px] md:text-2xl md:text-[22.75px] lg:text-[24px]"
           >
-            <h1
-              class="xs:text-3xl xs:leading-normal text-secColor xs:max-w-[320px] max-w-[280px] text-[28.75px] leading-snug font-extrabold will-change-transform motion-reduce:transform-none sm:max-w-[420px] sm:text-4xl sm:leading-[1.2] md:max-w-[420px] rtl:self-end"
-            >
-              Severance (2022)
-            </h1>
-            <div
-              class="xs:gap-3 flex flex-row flex-wrap items-center gap-[6px] will-change-transform motion-reduce:transform-none sm:gap-[14px] rtl:self-end"
-            >
-              <span
-                class="genre xs:text-[11.75px] rounded-full px-[10px] py-[2.75px] text-[10.75px] sm:px-3 sm:py-1 sm:text-[12px] md:text-[12.75px]"
-                >Drama</span
-              ><span
-                class="genre xs:text-[11.75px] rounded-full px-[10px] py-[2.75px] text-[10.75px] sm:px-3 sm:py-1 sm:text-[12px] md:text-[12.75px]"
-                >Mystery</span
-              ><span
-                class="genre xs:text-[11.75px] rounded-full px-[10px] py-[2.75px] text-[10.75px] sm:px-3 sm:py-1 sm:text-[12px] md:text-[12.75px]"
-                >Sci-Fi</span
-              >
-            </div>
-            <div
-              class="xs:text-[15.75px] text-[14.25px] leading-relaxed will-change-transform motion-reduce:transform-none sm:text-base"
-            >
-              <input type="checkbox" id="toggle" class="show-more-checkbox" />
-              <div class="movie-description">
-                <p class="truncated-text">
-                  Mark leads a team of office workers whose memories have been
-                  surgically divided between their work and personal lives. When
-                  a mysterious colleague appears outside of work, it begins a
-                  journey to discover the truth about their jobs. At Lumon
-                  Industries, employees undergo a procedure called "severance,"
-                  which creates a complete separation between their work
-                  memories (innie) and their outside memories (outie). Mark
-                  Scout leads a team of four employees in the Macrodata
-                  Refinement department, where they sort numbers on computers
-                  for reasons unknown to them. The severed employees have no
-                  memory of the outside world while at work, and no memory of
-                  work while outside.
-                </p>
+            Watch Severance Season 1
+          </h1>
+          <hr class="text-foreground-muted my-2" />
+          <div
+            data-bg="/images/background.webp"
+            data-gradient="linear-gradient(
+              to right,
+              rgba(0, 0, 0, 0.075),
+              rgba(0, 0, 0, 0.075)
+            )"
+            class="lazy-bg text-foreground-inverse dark:text-foreground dark:bg-background bg-foreground/90 flex flex-col gap-4 bg-cover bg-[position:center_center] p-4 text-base md:flex-row"
+          >
+            <div class="flex flex-1 flex-col items-center sm:flex-row">
+              <div class="players flex gap-4">
+                <a
+                  href="single.html/?watch=true&player=1"
+                  aria-label="player 1"
+                  class="hover:border-primary active hover:bg-primary cursor flex items-center justify-center gap-1 rounded-full border px-[10px] py-[2.75px] text-sm hover:text-white sm:px-3 sm:py-1"
+                >
+                  <svg
+                    class="size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
+                  Player 1
+                </a>
+                <a
+                  href="single.html/?watch=true&player=2"
+                  aria-label="player 1"
+                  class="hover:border-primary hover:bg-primary cursor flex items-center justify-center gap-1 rounded-full border px-[10px] py-[2.75px] text-sm hover:text-white sm:px-3 sm:py-1"
+                >
+                  <svg
+                    class="size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
+                  Player 2
+                </a>
+                <a
+                  href="single.html/?watch=true&player=3"
+                  aria-label="player 1"
+                  class="hover:border-primary hover:bg-primary cursor flex items-center justify-center gap-1 rounded-full border px-[10px] py-[2.75px] text-sm hover:text-white sm:px-3 sm:py-1"
+                >
+                  <svg
+                    class="size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
+                  Player 3
+                </a>
               </div>
-              <label
-                for="toggle"
-                class="show-more-btn inline-block font-bold transition-all duration-300 hover:underline"
-                >show</label
-              >
+
+              <div class="mt-4 sm:mt-0 sm:ml-auto rtl:sm:mr-auto rtl:sm:ml-0">
+                <a
+                  href="#"
+                  aria-label="download"
+                  class="cursor flex items-center justify-center gap-1 rounded-full border border-green-700 bg-green-700 px-[10px] py-[2.75px] text-sm text-white hover:bg-green-600 sm:px-3 sm:py-1"
+                >
+                  <svg
+                    class="size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 17V3" />
+                    <path d="m6 11 6 6 6-6" />
+                    <path d="M19 21H5" />
+                  </svg>
+                  Download
+                </a>
+              </div>
             </div>
-            <div class="flex flex-row items-center gap-4">
-              <a
-                href="#trailer"
-                name="watch-trailer"
-                class="xs:text-[14.75px] xs:py-2 xs:px-5 text-shadow watch-trailer rounded-full px-[18px] py-[6px] text-[13.75px] font-medium transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+
+            <hr
+              class="text-foreground-muted/50 dark:text-foreground-muted md:hidden"
+            />
+
+            <div class="flex justify-center gap-2">
+              <div
+                class="views border-foreground-muted/50 dark:border-foreground-muted flex flex-col px-4 text-center md:border-l-1 rtl:md:border-r-1 rtl:md:border-l-0"
               >
-                Watch trailer</a
-              ><a
-                href="/single.html?watch=true"
-                name="watch-now"
-                class="xs:text-[14.75px] xs:py-2 xs:px-5 shadow-glow bg-primary rounded-full px-[18px] py-[6px] text-[13.75px] font-medium !text-white transition-all duration-300 hover:-translate-y-[2px] active:translate-y-[1px] sm:px-6 sm:text-base"
+                <span>1,233,537</span>
+                <span
+                  class="text-foreground-inverse/70 dark:text-foreground/70 text-sm"
+                  >views</span
+                >
+              </div>
+              <div
+                class="post-date border-foreground-muted/50 dark:border-foreground-muted flex flex-col border-l-1 pl-4 text-center rtl:border-r-1 rtl:border-l-0 rtl:pr-4 rtl:pl-0"
               >
-                Watch now
-              </a>
+                <span>PopStream</span>
+                <span
+                  class="text-foreground-inverse/70 dark:text-foreground/70 text-sm"
+                  >14 April 2022</span
+                >
+              </div>
             </div>
           </div>
+          <hr class="text-foreground-muted my-2" />
         </div>
       </section>
 

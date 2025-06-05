@@ -16,6 +16,7 @@ export default defineConfig({
         main: "src/index.html",
         browse: "src/browse.html",
         single: "src/single.html",
+        watch: "src/watch.html",
         404: "src/404.html",
         about: "src/about.html",
         contact: "src/contact.html",

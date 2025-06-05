@@ -270,3 +270,8 @@ img.lazy-fade.is-loaded {
 .rtl footer ul {
     direction: rtl !important;
 }
+
+/* Watch page */
+.players a.active {
+    @apply !border-primary !text-primary !font-bold hover:bg-transparent
+}
