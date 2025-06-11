@@ -10,9 +10,8 @@ A modern and responsive Movie/TV show streaming platform template built with `Ty
 - 🎨 Modern and responsive design
 - 🌓 Light/Dark theme support
 - 🌐 RTL language support
-- 🎭 Dynamic hero slider with trailer previews
+- ⚡️ Optimized images with lazy loading
 - 🔄 Smooth content carousels using Swiper.js
-- 📱 Full mobile responsiveness with animated menu
 - 🎯 Fully TypeScript enabled
 - 🎨 TailwindCSS for styling
 - 🚀 Built with Vite for optimal performance
