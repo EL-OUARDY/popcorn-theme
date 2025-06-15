@@ -37,6 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Nicely load images with a fade effect
   loadImages();
   loadBackgroundImages();
+
+  // Share button click
+  const shareBtn = document.querySelector(".share-btn");
+  shareBtn?.addEventListener("click", (event) => shareContent(event));
 });
 
 function changeTheme(theme: string | null = null) {
@@ -116,4 +120,41 @@ function loadBackgroundImages() {
     };
     img.src = url as string; // start the download
   });
+}
+
+async function shareContent(event: Event) {
+  event.preventDefault();
+
+  // Get the current page title and URL
+  const title = document.title;
+  const url = window.location.href;
+
+  // Check if the Web Share API is supported
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: title,
+        url: url,
+      });
+    } catch (err: any) {
+      if (err.name !== "AbortError") {
+        console.error("Error sharing:", err);
+        // Fallback to copy to clipboard
+        await copyToClipboard(url);
+        alert("Link copied to clipboard!");
+      }
+    }
+  } else {
+    // Fallback for browsers that don't support Web Share API
+    await copyToClipboard(url);
+    alert("Link copied to clipboard!");
+  }
+}
+
+async function copyToClipboard(text: string) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (err) {
+    console.error("Failed to copy:", err);
+  }
 }
