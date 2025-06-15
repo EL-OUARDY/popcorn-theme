@@ -39,8 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
   loadBackgroundImages();
 
   // Share button click
-  const shareBtn = document.querySelector(".share-btn");
-  shareBtn?.addEventListener("click", (event) => shareContent(event));
+  const shareBtns = document.querySelectorAll(".share-btn");
+  shareBtns.forEach((shareBtn) =>
+    shareBtn?.addEventListener("click", (event) => shareContent(event)),
+  );
 });
 
 function changeTheme(theme: string | null = null) {
